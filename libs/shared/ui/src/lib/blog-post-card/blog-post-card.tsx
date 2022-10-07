@@ -1,16 +1,16 @@
 import Link from 'next/link';
 
 export interface BlogPostCardProps {
-  title: string
-  slug: string
-  gradient: string
+  title: string;
+  slug: string;
+  gradient: string;
 }
 
 export function classNames(...classes: (false | null | undefined | string)[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function BlogPostCard({ title, slug, gradient }: BlogPostCardProps) {
+export const BlogPostCard = ({ title, slug, gradient }: BlogPostCardProps) => {
   return (
     <Link href={`/blog/${slug}`}>
       <a
@@ -30,4 +30,4 @@ export default function BlogPostCard({ title, slug, gradient }: BlogPostCardProp
       </a>
     </Link>
   );
-}
+};

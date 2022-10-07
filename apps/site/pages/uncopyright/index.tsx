@@ -4,9 +4,7 @@ import Link from 'next/link';
 // TODO: Add link to the repo of the website and suggest to fork my repo and make pull requests
 // TODO: Write this page in my own words
 
-export interface UncopyrightProps {}
-
-export function Uncopyright(props: UncopyrightProps) {
+export const Uncopyright = () => {
   return (
     <Container>
       <div className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
@@ -83,6 +81,6 @@ export function Uncopyright(props: UncopyrightProps) {
       </div>
     </Container>
   );
-}
+};
 
 export default Uncopyright;

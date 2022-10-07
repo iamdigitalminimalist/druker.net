@@ -1,7 +1,5 @@
-import Navbar from '../../../libs/shared/ui/src/lib/navbar/navbar';
-import { Container } from '@ordev/shared/ui';
+import { Container, BlogPostCard } from '@ordev/shared/ui';
 import Image from 'next/image';
-import BlogPostCard from '../../../libs/shared/ui/src/lib/blog-post-card/blog-post-card';
 import Link from 'next/link';
 
 const meta = {

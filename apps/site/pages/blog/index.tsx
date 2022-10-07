@@ -5,7 +5,7 @@ export interface BlogProps {
   name: string;
 }
 
-export function Blog(props: BlogProps) {
+const Blog = (props: BlogProps) => {
   return (
     <Container>
       <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
@@ -19,7 +19,7 @@ export function Blog(props: BlogProps) {
       </div>
     </Container>
   );
-}
+};
 
 export const getStaticProps: GetStaticProps<BlogProps> = async (context) => {
   return {

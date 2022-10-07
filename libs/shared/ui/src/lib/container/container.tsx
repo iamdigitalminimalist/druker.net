@@ -14,7 +14,7 @@ export interface ContainerProps {
 const mainStyle =
   'flex flex-col justify-center px-8 md:px-0 bg-gray-50 dark:bg-gray-900';
 
-export function Container(props: ContainerProps) {
+export const Container = (props: ContainerProps) => {
   const { children, ...customMeta } = props;
   const router = useRouter();
 
@@ -51,6 +51,4 @@ export function Container(props: ContainerProps) {
       </div>
     </>
   );
-}
-
-export default Container;
+};

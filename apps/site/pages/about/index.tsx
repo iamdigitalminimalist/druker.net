@@ -35,7 +35,6 @@ export function About(props: AboutProps) {
                   <span className="italic underline underline-offset-4">
                     Or
                   </span>
-                  .
                   <br />
                   How can I help you?
                 </h2>
@@ -66,14 +65,14 @@ export function About(props: AboutProps) {
 
               <h3>Motivation and Drive</h3>
               <p className="-my-0.5">
-                I am still figuring out what is the purpose of this website.
-                Here are some thoughts:
+                Although I am still figuring out what is the purpose of this
+                website, here are some thoughts:
               </p>
               <ul>
                 <li className="-mt-2">
                   <strong>Showing my work</strong> - I wanted a platform where I
-                  could share my thoughts with everyone and show what I have
-                  learned and discovered.
+                  could share knowledge with everyone and show the world what I
+                  have learned and discovered.
                 </li>
                 <li>
                   <strong>Zen</strong> - Coding has become a meditative

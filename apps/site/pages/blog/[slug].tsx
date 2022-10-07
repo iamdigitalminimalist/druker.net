@@ -1,11 +1,9 @@
-/* eslint-disable-next-line */
-import { GetStaticPaths, InferGetStaticPropsType } from 'next';
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import { join } from 'path';
 import { readdirSync } from 'fs';
 import { getParsedFileContentBySlug, renderMarkdown } from '@ordev/markdown';
 import { MDXRemote } from 'next-mdx-remote';
-// import { CustomLink, Youtube } from '@ordev/shared/mdx-elements';
 import dynamic from 'next/dynamic';
 import { Container } from '@ordev/shared/ui';
 import Image from 'next/image';
@@ -31,6 +29,8 @@ export function Article({
   frontMatter,
   html,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  console.log(frontMatter);
+  console.log(html);
   return (
     <Container>
       <div className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
@@ -53,13 +53,13 @@ export function Article({
                   />
                 </div>
                 <h5 className="ml-2 text-sm text-gray-700 dark:text-gray-300">
-                  By {frontMatter.author} /{' '}
-                  {format(new Date(frontMatter.date), 'LLL dd, Y')}
+                  {`By ${frontMatter.author.name} /
+                  ${format(new Date(frontMatter.date), 'LLL dd, Y')}`}
                 </h5>
               </div>
             </div>
             <hr />
-            <div className="text-gray-700 dark:text-gray-300">
+            <div className="text-gray-800 dark:text-gray-200">
               <MDXRemote {...html} components={mdxElements} />
             </div>
             <hr />
@@ -70,7 +70,11 @@ export function Article({
   );
 }
 
-export const getStaticProps = async ({ params }: { params: ArticleProps }) => {
+export const getStaticProps: GetStaticProps = async ({
+  params,
+}: {
+  params: ArticleProps;
+}) => {
   // 1. parse the content of the markdown and separate it into front-matter and content
   const articleMarkdownContent = getParsedFileContentBySlug(
     params.slug,
