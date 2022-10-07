@@ -1,17 +1,13 @@
-import { AppProps } from 'next/app';
+import {AppProps} from 'next/app';
+import { ThemeProvider } from 'next-themes';
 import Head from 'next/head';
 import './styles.css';
 
-function CustomApp({ Component, pageProps }: AppProps) {
+function CustomApp({Component, pageProps}: AppProps) {
   return (
-    <>
-      <Head>
-        <title>Welcome to site!</title>
-      </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
-    </>
+    <ThemeProvider attribute="class">
+      <Component {...pageProps} />
+    </ThemeProvider>
   );
 }
 

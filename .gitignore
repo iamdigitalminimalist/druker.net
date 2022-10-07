@@ -39,4 +39,11 @@ testem.log
 Thumbs.db
 
 # Next.js
-.next
+**/.next
+
+# Environment Variables
+**.env
+
+# IntelliJ / VS Code
+.idea
+.iml

@@ -2,7 +2,11 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "markdown": "libs/markdown",
+    "shared-mdx-elements": "libs/shared/mdx-elements",
+    "shared-ui": "libs/shared/ui",
     "site": "apps/site",
-    "site-e2e": "apps/site-e2e"
+    "site-e2e": "apps/site-e2e",
+    "storybook-e2e-ui-e2e": "apps/storybook-e2e/ui-e2e"
   }
 }

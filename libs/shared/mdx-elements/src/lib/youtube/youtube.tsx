@@ -2,8 +2,8 @@ import styles from './youtube.module.css';
 
 /* eslint-disable-next-line */
 export interface YoutubeProps {
-  title: string
-  uid: string
+  title: string;
+  uid: string;
 }
 
 export function Youtube(props: YoutubeProps) {

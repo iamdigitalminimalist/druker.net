@@ -1,18 +1,3 @@
-// import { Story, Meta} from '@storybook/react'
-// import { TopicButton, TopicButtonProps} from "./topic-button"
-//
-// export default {
-//   components: TopicButton,
-//   title: 'TopicButton'
-// } as Meta
-//
-// const Template: Story<TopicButtonProps> = (args) => <TopicButton {...args} />
-//
-// export const Primary = Template.bind({})
-// Primary.args = {}
-//
-
-
 import { Story, Meta } from '@storybook/react';
 import { useState } from 'react';
 import { TopicButton, TopicButtonProps } from './topic-button';
