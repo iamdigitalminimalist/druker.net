@@ -24,7 +24,7 @@ export default function Home() {
               <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
                 Or Druker
               </h1>
-              <h2 className="text-gray-700 dark:text-gray-200 mb-4 mt-1 text-sm sm:text-2xl">
+              <h2 className="text-gray-700 dark:text-gray-200 mb-4 mt-1 text-xl sm:text-2xl">
                 Front End Developer & Creator
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mr-6 mb-16 max-w-lg font-medium">
@@ -56,13 +56,13 @@ export default function Home() {
               gradient="from-[#D8B4FE] to-[#818CF8]"
             />
             <BlogPostCard
-              title={'React in a Nutshell'}
-              slug="react-in-a-nutshell"
+              title={'React in a Nutshell - Coming Soon'}
+              slug=""
               gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
             />
             <BlogPostCard
-              title={'Thinking in JavaScript'}
-              slug="thinking-in-javascript"
+              title={'Thinking in JavaScript - Coming Soon'}
+              slug=""
               gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
             />
           </div>

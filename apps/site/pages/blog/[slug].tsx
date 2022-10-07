@@ -37,8 +37,10 @@ export function Article({
           {frontMatter.title}
         </h1>
 
-        <h2>{frontMatter.excerpt}</h2>
-        <div className="flex flex-col items-start justify-between w-full mt-2 md:flex-row md:items-center">
+        <h2 className="text-gray-700 dark:text-gray-200 text-md sm:text-lg md:text-2xl mb-2">
+          {frontMatter.excerpt}
+        </h2>
+        <div className="flex flex-col items-start justify-between w-full my-3 md:flex-row md:items-center">
           <div className="flex items-center">
             <div className="relative h-10 w-10">
               <Image
@@ -60,10 +62,11 @@ export function Article({
         <div className="w-full mt-4 prose dark:prose-dark max-w-none">
           <MDXRemote {...html} components={mdxElements} />
         </div>
-        <div className="w-full my-4">
+        <div className="w-full my-8">
           <hr />
           <div className="flex flex-col items-center justify-center my-4">
-            <h4 className="mb-4 text-sm font-bold tracking-tight text-black sm:text-lg md:text-2xl dark:text-white">
+            <h4 className="mb-4 text-lg font-bold text-center tracking-tight text-black sm:text-xl md:text-2xl dark:text-white">
+              Thank you for reading 🤗 <br />
               Found it valuable? Feel free to share it
             </h4>
             <SocialMediaShareButton slug={slug} title={frontMatter.title} />

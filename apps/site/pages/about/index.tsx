@@ -12,7 +12,7 @@ export function About(props: AboutProps) {
     <Container>
       <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <div className="flex flex-col-reverse sm:flex-row items-start">
-          <article className="prose prose-sm dark:prose-dark md:prose-md">
+          <article className="prose prose-sm sm:prose-lg dark:prose-dark w-full">
             <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
               About {props.name}
             </h1>
@@ -64,10 +64,7 @@ export function About(props: AboutProps) {
               <hr />
 
               <h3>Motivation and Drive</h3>
-              <p className="-my-0.5">
-                Although I am still figuring out what is the purpose of this
-                website, here are some thoughts:
-              </p>
+              <p className="-my-0.5">I am here to help and get helped 🤓</p>
               <ul>
                 <li className="-mt-2">
                   <strong>Showing my work</strong> - I wanted a platform where I
@@ -99,7 +96,7 @@ export function About(props: AboutProps) {
                   title="Or and a happy cow in an intimate moment"
                 />
               </div>
-              <figcaption className="text-xs sm:text-sm mx-auto mb-2 sm:mb-4">
+              <figcaption className="text-[0.75rem] sm:text-sm mx-auto mb-2 sm:mb-4">
                 Getting sniffed by a happy cow at{' '}
                 <Link href="https://happyherd.org/">
                   <a target="_blank">The Happy Herd Farm Sanctuary</a>

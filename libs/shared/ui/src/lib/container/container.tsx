@@ -11,9 +11,6 @@ export interface ContainerProps {
   children: JSX.Element;
 }
 
-const mainStyle =
-  'flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900';
-
 export const Container = (props: ContainerProps) => {
   const { children, ...customMeta } = props;
   const router = useRouter();
@@ -42,10 +39,7 @@ export const Container = (props: ContainerProps) => {
       </Head>
       <div className="flex flex-col justify-center px-4">
         <Navbar />
-        <main
-          id="skip"
-          className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900"
-        >
+        <main id="skip" className="flex flex-col justify-center px-8">
           {children}
         </main>
         <Footer />
