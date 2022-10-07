@@ -5,46 +5,101 @@ date: '2022-10-02T02:15:21.510Z'
 author:
   name: 'Or Druker'
 ---
-This blog post is an intertextual tribute to the prologue of the book *"[Zen Mind, Beginner's Mind](https://www.shambhala.com/zen-mind-beginner-s-mind-1796.html),"* written by the Japanese Zen monk [Shunryu Suzuki](https://en.wikipedia.org/wiki/Shunry%C5%AB_Suzuki).
+
+This blog post is an intertextual-tribute to the prologue of the book _"[Zen Mind, Beginner's Mind](https://www.shambhala.com/zen-mind-beginner-s-mind-1796.html),"_ written by the Japanese Zen monk [Shunryu Suzuki](https://en.wikipedia.org/wiki/Shunry%C5%AB_Suzuki).
 
 <hr />
 
->"In the beginner's mind there are many possibilities; in the expert's mind, there are few." &nbsp;&nbsp;&nbsp;&nbsp;— **Shunryu Suzuki**
+> "In the beginner's mind there are many possibilities; in the expert's mind, there are few." &nbsp;&nbsp;&nbsp;&nbsp;— **Shunryu Suzuki**
 
 People think that coding is challenging, but there is a misunderstanding as to why.
 It is not challenging because it is hard to learn how to develop a web app or to become a DevOps master.
-It is challenging because it is hard to keep your curiosity and motivation in their purest form, as you had when you had just started.<br />
+It is challenging because it is hard to keep your curiosity and motivation in their purest sense<br />
 
-I was first introduced to coding when I was about 10 years old.
-I attended a one-week summer camp at a community center, where we learned HTML and JavaScript from high school students.
-I got super excited, and immediately I became obsessed with it.
-6 years later, still enchanted and motivated, I studied Computer Science and Math in high school to deepen my understanding of the logic behind programming.<br />
+I was first introduced to coding when I was 10 years old.
+I attended a one-week summer camp at a small community center, where we learned HTML and JavaScript from high school students.
+I got super excited, and immediately I became obsessed with it, as if I could learn it all.
+6 years later, still enchanted and motivated, I studied Computer Science and Math in high school and loved the logic behind programming.<br />
 
-Unfortunately, after a few years of military service, I took Computer Science at university, and I got overwhelmed by the requirements and life in general.
-I ended up abandoning technology as a passion for a few years.<br />
+Although I improved over the years and worked with the most advanced technology, as young as 18, I have gradually lost the limitless meaning I had with the original mind.
+When I took Computer Science at university, I got overwhelmed by the requirements and life in general, and I ended up abandoning technology as a passion for a few years.
 
 About 2 years ago, a dear-loving friend suggested looking into React and JavaScript.
 Inspired by my friend, I decided to reconnect with my love for coding and approach it as a beginner.
-Lior, 10x for the encouragement 🙏🏼<br />
+**_Lior, 10x for the encouragement! It gives a new mean to express creativity_** 🙏🏼<br />
 
-But I do not want to talk about my tech background, university, trauma, or the history of DevOps.
-***I'm interested in helping you to keep your coding journey from becoming impure.*** <br />
+> "The beginner's mind is the mind of compassion. When our mind is compassionate, it is boundless." &nbsp;&nbsp;&nbsp;&nbsp;— **Shunryu Suzuki**
 
-In Japanese, there is the phrase *初心* (pronounced: *Shoshin*), which means ***beginner's mind***.
-In the beginner's mind, there are no preconceived ideas or notions about what we know, which keeps our minds open and ready for anything.
-*<u>Suggestion</u>: do not forget about this point and get in touch with your beginner's mind if you feel lost or discouraged*.
+But enough stories for now because I don't want to talk about my tech background, university, trauma, or the history of DevOps.
+**_I'm interested in helping you to keep your coding journey from becoming impure._** <br />
+
+In Japanese, there is the phrase **_初心_** (pronounced: **_Shoshin_**), which means **_beginner's mind_**.
+In the beginner's mind, there are no preconceived ideas or notions about what we know, which keeps our minds wide open and ready for anything.
+_<u>Tip</u>: if you feel lost or discouraged, get in touch with your beginner's mind_.
+
+<br />
+<Youtube
+  uid="mvl_zHwIBeA?start=360&end=175"
+  title="Dan Abramov responded to a random question"
+/>
+<figcaption>
+  [Dan Abramov](https://overreacted.io/) is handling random questions on a live
+  stream.
+</figcaption>
+<br />
 
 ### What do you need to get started?
-- **Patience**. Similarly to studying a foreign language, you can't learn coding all at once and make remarkable progress. Learn it little by little.
-- **Endurance**. Sometimes in the process, you may feel lost and incapable. That's OK. Do not stop. Cheer up and move on.
-- **Teacher**. Find a coding mentor and follow them. See if you can get chat with a teacher and about what you learn and discover. *<u>Remember</u>: in the beginner's mind, everyone could be your teacher.*
 
->"The beginner's mind is the mind of compassion. When our mind is compassionate, it is boundless." &nbsp;&nbsp;&nbsp;&nbsp;— **Shunryu Suzuki**
+- **Patience**. Similarly to studying a foreign language, you can't learn coding all at once and make rapid progress. Learn it little by little.
+- **Endurance**. Endurance. Sometimes in the journey, you may feel lost. Let it come and let it go, but don't serve it a cup of tea.
+- **Teacher**. Find a coding mentor and follow them. See if you can get chat with a teacher and about what you learn and discover. _<u>Hint</u>: in the beginner's mind, everyone could be your teacher._
 
-So the biggest challenge is to keep your beginner's mind. The rest will happen by itself, moment after moment.
+So the biggest challenge is to keep your beginner's mind. The rest will keep itself, moment after moment.
 There is no need to have a deep understanding of technology or a CS degree.
 Even though you read many docs and articles, you should read each sentence with a fresh mind.
-You would rather not say, "I know what coding is," or "I'm a DevOps master."
-*Be careful about this point.*
+You would rather not say, "I know what coding is," or "I have mastered DevOps."
+_Be careful about this point._
 
-In the next post, I will elaborate on the bare essentials of the front-end developer.
+In the next post, I will share the core of the front-end developer.
+If you like it, please feel free to share it and give me a feedback.
+
+<hr />
+
+```JSX
+import { ThemeProvider } from 'zen-mind'
+import { Component } from 'developer-mind'
+import { theme } from '../styles/beginners-mind'
+import { Button } from '../components/Button'
+import { BeginnersMindAppProps } from '../libs/@types'
+
+export const BeginnersMindApp = (props: BeginnersMindAppProps) => {
+  const [isDiscourage, setIsDiscourage] = useState(false)
+
+  handleOnDiscouarge = async () => {
+    try {
+      await Promise.all([
+        props.patience.slowDown(),
+        props.endurance.letItGo(),
+        props.teacher.findCodingTeacher()
+      ])
+      setIsDiscourage(false)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  return (
+  <ThemeProvider theme={theme}>
+    {isDiscourage
+      ? ( <Component {...props} /> )
+      : ( <Button onDiscourage={handleOnDiscouarge}>Click me</Button> )
+    }
+  </ThemeProvider>
+ )
+}
+```
+
+<figcaption>
+  A code version of this post in React and TypeScript. What would make it
+  render?
+</figcaption>

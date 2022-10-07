@@ -12,7 +12,7 @@ export function About(props: AboutProps) {
     <Container>
       <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <div className="flex flex-col-reverse sm:flex-row items-start">
-          <article className="prose prose-sm dark:prose-dark md:prose-md xl: prose-lg xl:prose-lg">
+          <article className="prose prose-sm dark:prose-dark md:prose-md">
             <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
               About {props.name}
             </h1>
@@ -139,22 +139,6 @@ export function About(props: AboutProps) {
                   </li>
                 </ul>
               </div>
-              <p>
-                incredible states, which taught me many lessons. Canada I seek
-                peace, and Israel when I homesick. have family and friends.
-                practice 只管打坐 (pronounced: Shikantaza), which is to put
-                ephasise on one activity. Thanks for taking the time and
-                interest in hearing more about my background. I&apos;ve been
-                solving the problems of others - using IT and research - since I
-                was little. I&apos;ve found the logic of programming quite
-                intuitive and fun. I&apos;m also passionate about good design
-                and user interface. With React and JavaScript, I&apos;ve been
-                creating cool stuff online and expressing my creativity. On a
-                personal level, I live a simple and minimalistic lifestyle,
-                enjoying plant-based food, meditation, and walking in nature.
-                I&apos;d be happy to take my passion to the next level and join
-                a team of like-minded people.
-              </p>
             </div>
           </article>
         </div>

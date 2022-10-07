@@ -20,12 +20,12 @@ export default function Home() {
       <>
         <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
           <div className="flex flex-col-reverse sm:flex-row items-start">
-            <div className="prose prose-sm dark:prose-dark md:prose-md xl:prose-lg">
+            <div className="prose prose-sm dark:prose-dark md:prose-md">
               <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
                 Or Druker
               </h1>
               <h2 className="text-gray-700 dark:text-gray-200 mb-4 mt-1">
-                Front End Developer
+                Front End Developer | Zen Student
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mr-6 mb-16 max-w-lg font-medium">
                 Helping developers build a faster web with cutting-edge

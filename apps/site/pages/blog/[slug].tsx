@@ -29,13 +29,11 @@ export function Article({
   frontMatter,
   html,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log(frontMatter);
-  console.log(html);
   return (
     <Container>
       <div className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
         <div className="flex flex-col-reverse sm:flex-row items-start">
-          <article className="prose prose-sm dark:prose-dark md:prose-md xl:prose-lg">
+          <article className="prose prose-sm dark:prose-dark md:prose-md lg:prose-lg">
             <h1 className="tracking-tight text-black dark:text-white">
               {frontMatter.title}
             </h1>
