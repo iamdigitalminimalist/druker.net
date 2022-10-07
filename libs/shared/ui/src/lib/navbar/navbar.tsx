@@ -51,7 +51,7 @@ function NavItem({ href, text }: NavItemProps) {
           isActive
             ? 'font-semibold text-gray-800 dark:text-gray-800 bg-gray-200'
             : 'font-normal text-gray-300 dark:text-gray-400 dark:hover:text-gray-600',
-          'cursor-pointer inline-block p-1 px-3 py-2 mx-1 rounded-lg hover:bg-gray-200 dark:transition-all'
+          'cursor-pointer inline-block p-1 px-3 py-2 mx-[1px] sm:mx-2 rounded-lg hover:bg-gray-200 dark:transition-all'
         )}
       >
         {text}

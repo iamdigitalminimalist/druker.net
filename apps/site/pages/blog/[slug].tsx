@@ -32,46 +32,45 @@ export function Article({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Container>
-      <div className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
-        <div className="flex flex-col-reverse sm:flex-row items-start">
-          <article className="prose prose-sm dark:prose-dark md:prose-md lg:prose-lg">
-            <h1 className="tracking-tight text-black dark:text-white">
-              {frontMatter.title}
-            </h1>
-            <h2>{frontMatter.excerpt}</h2>
-            <div className="flex flex-col items-start justify-between w-full mt-2 md:flex-row md:items-center">
-              <div className="flex items-center">
-                <div className="relative h-10 w-10">
-                  <Image
-                    alt="Or Druker"
-                    height={24}
-                    width={24}
-                    sizes="20vw"
-                    src="/avatar.jpg"
-                    className="rounded-full"
-                  />
-                </div>
-                <h5 className="ml-2 text-sm text-gray-700 dark:text-gray-300">
-                  {`By ${frontMatter.author.name} /
+      <article className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
+        <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
+          {frontMatter.title}
+        </h1>
+
+        <h2>{frontMatter.excerpt}</h2>
+        <div className="flex flex-col items-start justify-between w-full mt-2 md:flex-row md:items-center">
+          <div className="flex items-center">
+            <div className="relative h-10 w-10">
+              <Image
+                alt="Or Druker"
+                height={24}
+                width={24}
+                sizes="20vw"
+                src="/avatar.jpg"
+                className="rounded-full"
+              />
+            </div>
+            <h5 className="ml-2 text-sm text-gray-700 dark:text-gray-300">
+              {`By ${frontMatter.author.name} /
                   ${format(new Date(frontMatter.date), 'LLL dd, Y')}`}
-                </h5>
-              </div>
-            </div>
-            <hr />
-            <div className="text-gray-800 dark:text-gray-200">
-              <MDXRemote {...html} components={mdxElements} />
-            </div>
-            <div className="flex flex-col flex-grow-1">
-              <hr />
-              <div className="flex flex-col items-center justify-center">
-                <h4>Found it valuable? Feel free to share it</h4>
-                <SocialMediaShareButton slug={slug} title={frontMatter.title} />
-              </div>
-              <hr />
-            </div>
-          </article>
+            </h5>
+          </div>
         </div>
-      </div>
+        <hr />
+        <div className="w-full mt-4 prose dark:prose-dark max-w-none">
+          <MDXRemote {...html} components={mdxElements} />
+        </div>
+        <div className="w-full my-4">
+          <hr />
+          <div className="flex flex-col items-center justify-center my-4">
+            <h4 className="mb-4 text-sm font-bold tracking-tight text-black sm:text-lg md:text-2xl dark:text-white">
+              Found it valuable? Feel free to share it
+            </h4>
+            <SocialMediaShareButton slug={slug} title={frontMatter.title} />
+          </div>
+          <hr />
+        </div>
+      </article>
     </Container>
   );
 }

@@ -30,7 +30,7 @@ export default function Document(props) {
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </Head>
-      <body className="bg-white dark:bg-black text-white dark:text-black">
+      <body className="bg-gray-50 dark:bg-gray-900 w-full">
         <Main />
         <NextScript />
       </body>

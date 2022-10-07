@@ -12,7 +12,7 @@ export interface ContainerProps {
 }
 
 const mainStyle =
-  'flex flex-col justify-center px-8 md:px-0 bg-gray-50 dark:bg-gray-900';
+  'flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900';
 
 export const Container = (props: ContainerProps) => {
   const { children, ...customMeta } = props;
@@ -40,14 +40,15 @@ export const Container = (props: ContainerProps) => {
         <meta name="twitter:description" content={props.description} />
         <meta name="twitter:image" content={props.image} />
       </Head>
-      <div className="bg-gray-50 dark:bg-gray-900 w-screen h-screen">
-        <div className="flex flex-col justify-center">
-          <Navbar />
-          <main id="skip" className={mainStyle}>
-            {children}
-          </main>
-          <Footer />
-        </div>
+      <div className="flex flex-col justify-center px-4">
+        <Navbar />
+        <main
+          id="skip"
+          className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900"
+        >
+          {children}
+        </main>
+        <Footer />
       </div>
     </>
   );
