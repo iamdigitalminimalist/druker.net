@@ -5,7 +5,7 @@ import { readdirSync } from 'fs';
 import { getParsedFileContentBySlug, renderMarkdown } from '@ordev/markdown';
 import { MDXRemote } from 'next-mdx-remote';
 import dynamic from 'next/dynamic';
-import { Container } from '@ordev/shared/ui';
+import { Container, SocialMediaShareButton } from '@ordev/shared/ui';
 import Image from 'next/image';
 import { format } from 'date-fns';
 
@@ -28,6 +28,7 @@ const POSTS_PATH = join(process.cwd(), process.env.ARTICLE_MARKDOWN_PATH);
 export function Article({
   frontMatter,
   html,
+  slug,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Container>
@@ -60,7 +61,14 @@ export function Article({
             <div className="text-gray-800 dark:text-gray-200">
               <MDXRemote {...html} components={mdxElements} />
             </div>
-            <hr />
+            <div className="flex flex-col flex-grow-1">
+              <hr />
+              <div className="flex flex-col items-center justify-center">
+                <h4>Found it valuable? Feel free to share it</h4>
+                <SocialMediaShareButton slug={slug} title={frontMatter.title} />
+              </div>
+              <hr />
+            </div>
           </article>
         </div>
       </div>
@@ -86,6 +94,7 @@ export const getStaticProps: GetStaticProps = async ({
     props: {
       frontMatter: articleMarkdownContent.frontMatter,
       html: renderHtml,
+      slug: params.slug,
     },
   };
 };
