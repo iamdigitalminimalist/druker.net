@@ -4,11 +4,15 @@ import './styles.css';
 import Script from 'next/script';
 import { GoogleAnalytics } from 'nextjs-google-analytics';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <ThemeProvider attribute="class">
-        <GoogleAnalytics trackPageViews strategy="afterInteractive" />
+        {isProduction ? (
+          <GoogleAnalytics trackPageViews strategy="afterInteractive" />
+        ) : null}
         <Component {...pageProps} />
       </ThemeProvider>
     </>
