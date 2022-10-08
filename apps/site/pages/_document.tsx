@@ -33,6 +33,10 @@ export default function Document(props) {
           name="google-site-verification"
           content={process.env.NEXT_PUBLIC_GSC_CONTENT_ID}
         />
+        <meta
+          content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+          name="robots"
+        />
       </Head>
       <body className="bg-gray-50 dark:bg-gray-900 w-full">
         <Main />

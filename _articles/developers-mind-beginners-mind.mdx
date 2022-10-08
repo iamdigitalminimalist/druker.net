@@ -59,38 +59,39 @@ Even though you read many docs and articles, you should read each sentence with 
 You would rather not say, "I know what coding is," or "I have mastered DevOps."
 _Be careful about this point._
 
-```JSX
-import { ThemeProvider } from 'zen-mind'
-import { Component } from 'developer-mind'
-import { theme } from '../styles/beginners-mind'
-import { Button } from '../components/Button'
-import { BeginnersMindAppProps } from '../libs/@types'
+```ts
+import { ThemeProvider } from 'zen-mind';
+import { Component } from 'developer-mind';
+import { theme } from '../styles/beginners-mind';
+import { Button } from '../components/Button';
+import { BeginnersMindAppProps } from '../libs/@types';
 
 export const BeginnersMindApp = (props: BeginnersMindAppProps) => {
-  const [isDiscourage, setIsDiscourage] = useState(false)
+  const [isDiscourage, setIsDiscourage] = useState(false);
 
   handleOnDiscouarge = async () => {
     try {
       await Promise.all([
         props.patience.slowDown(),
         props.endurance.letItGo(),
-        props.teacher.findCodingTeacher()
-      ])
-      setIsDiscourage(false)
+        props.teacher.findCodingTeacher(),
+      ]);
+      setIsDiscourage(false);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   return (
-  <ThemeProvider theme={theme}>
-    {isDiscourage
-      ? ( <Component {...props} /> )
-      : ( <Button onDiscourage={handleOnDiscouarge}>Click me</Button> )
-    }
-  </ThemeProvider>
- )
-}
+    <ThemeProvider theme={theme}>
+      {isDiscourage ? (
+        <Component {...props} />
+      ) : (
+        <Button onDiscourage={handleOnDiscouarge}>Click me</Button>
+      )}
+    </ThemeProvider>
+  );
+};
 ```
 
 <figcaption>
