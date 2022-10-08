@@ -25,13 +25,23 @@ const mdxElements = {
 
 const POSTS_PATH = join(process.cwd(), process.env.ARTICLE_MARKDOWN_PATH);
 
+const metaBlogPost = {
+  image: '/or-banner.png',
+  type: 'website',
+};
+
 export function Article({
   frontMatter,
   html,
   slug,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <Container>
+    <Container
+      title={`Blog - Or Druker - ${frontMatter.title}`}
+      description={frontMatter.excerpt}
+      image={metaBlogPost.image}
+      type={metaBlogPost.type}
+    >
       <article className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
           {frontMatter.title}

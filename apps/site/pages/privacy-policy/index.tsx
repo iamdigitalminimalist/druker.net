@@ -4,9 +4,21 @@ import Link from 'next/link';
 // TODO: Add link to the repo of the website and suggest to fork my repo and make pull requests
 // TODO: Write this page in my own words
 
-export const Uncopyright = () => {
+const metaPrivacyPolicyPage = {
+  title: 'Privacy Policy - Or Druker',
+  description: `Learn how we collects, uses, and shares your personal data`,
+  image: '/or-banner.png',
+  type: 'website',
+};
+
+export const PrivacyPolicy = () => {
   return (
-    <Container>
+    <Container
+      title={metaPrivacyPolicyPage.title}
+      description={metaPrivacyPolicyPage.description}
+      image={metaPrivacyPolicyPage.image}
+      type={metaPrivacyPolicyPage.type}
+    >
       <div className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
         <div className="flex flex-col-reverse sm:flex-row items-start">
           <article className="prose prose-sm md:prose-md text-black dark:text-white">
@@ -21,4 +33,4 @@ export const Uncopyright = () => {
   );
 };
 
-export default Uncopyright;
+export default PrivacyPolicy;

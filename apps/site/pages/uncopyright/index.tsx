@@ -4,9 +4,22 @@ import Link from 'next/link';
 // TODO: Add link to the repo of the website and suggest to fork my repo and make pull requests
 // TODO: Write this page in my own words
 
+const metaUncopyrightPage = {
+  title: 'Uncopyright - Or Druker',
+  description: `This entire website is uncopyrighted. There is no need to email me for permission; use my content
+              however you want.`,
+  image: '/or-banner.png',
+  type: 'website',
+};
+
 export const Uncopyright = () => {
   return (
-    <Container>
+    <Container
+      title={metaUncopyrightPage.title}
+      description={metaUncopyrightPage.description}
+      image={metaUncopyrightPage.image}
+      type={metaUncopyrightPage.type}
+    >
       <div className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
         <div className="flex flex-col-reverse sm:flex-row items-start">
           <article className="prose prose-sm md:prose-md text-black dark:text-white">

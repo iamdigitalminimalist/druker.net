@@ -2,9 +2,11 @@ import { Container, BlogPostCard } from '@ordev/shared/ui';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const meta = {
-  title: 'Or Druker – Developer, writer, creator.',
-  description: `Front-end developer, JavaScript enthusiast, and course creator.`,
+const metaHomePage = {
+  title: 'Or Druker – Zen Student & Developer',
+  description: `Helping developers build a faster web with cutting-edge
+                technologies. Teaching front-end development with React,
+                Next.js, and TypeScript.`,
   image: '/or-banner.png',
   type: 'website',
 };
@@ -12,10 +14,10 @@ const meta = {
 export default function Home() {
   return (
     <Container
-      title={meta.title}
-      description={meta.description}
-      image={meta.image}
-      type={meta.type}
+      title={metaHomePage.title}
+      description={metaHomePage.description}
+      image={metaHomePage.image}
+      type={metaHomePage.type}
     >
       <>
         <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
@@ -25,7 +27,7 @@ export default function Home() {
                 Or Druker
               </h1>
               <h2 className="text-gray-700 dark:text-gray-200 mb-4 mt-1 text-xl sm:text-2xl">
-                Zen Developer
+                Zen Student & Developer
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mr-6 mb-16 max-w-lg font-medium">
                 Helping developers build a faster web with cutting-edge

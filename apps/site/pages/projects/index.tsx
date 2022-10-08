@@ -4,9 +4,21 @@ import Link from 'next/link';
 
 export interface ProjectsProps {}
 
+const metaProjectsPage = {
+  title: 'Projects - Or Druker',
+  description: `See a collection of my projects. This is how I taught myself to write code`,
+  image: '/or-banner.png',
+  type: 'website',
+};
+
 const Projects = (props: ProjectsProps) => {
   return (
-    <Container>
+    <Container
+      title={metaProjectsPage.title}
+      description={metaProjectsPage.description}
+      image={metaProjectsPage.image}
+      type={metaProjectsPage.type}
+    >
       <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <div className="flex flex-col-reverse sm:flex-row items-start">
           <div className="prose prose-md sm:prose-lg w-full dark:prose-dark">

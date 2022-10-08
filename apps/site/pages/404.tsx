@@ -1,11 +1,20 @@
 import { Container } from '@ordev/shared/ui';
 import Link from 'next/link';
 
+const metaNotFoundPage = {
+  title: '404 Page Not Found - Or Druker',
+  description: `This page doesn't exist. Please try different URL.`,
+  image: '/or-banner.png',
+  type: 'website',
+};
+
 const NotFoundPage = () => {
   return (
     <Container
-      title="404 Page Not Found - Or Druker"
-      description="This page doesn't exist. Please try different URL"
+      title={metaNotFoundPage.title}
+      description={metaNotFoundPage.description}
+      image={metaNotFoundPage.image}
+      type={metaNotFoundPage.type}
     >
       <section className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">

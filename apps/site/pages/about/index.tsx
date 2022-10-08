@@ -7,9 +7,21 @@ export interface AboutProps {
   name: string;
 }
 
+const metaAboutPage = {
+  title: 'About - Or Druker',
+  description: `An informal introduction to who is Or Druker and what this website is all about`,
+  image: '/or-banner.png',
+  type: 'website',
+};
+
 export function About(props: AboutProps) {
   return (
-    <Container>
+    <Container
+      title={metaAboutPage.title}
+      description={metaAboutPage.description}
+      image={metaAboutPage.image}
+      type={metaAboutPage.type}
+    >
       <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <div className="flex flex-col-reverse sm:flex-row items-start">
           <article className="prose prose-sm sm:prose-lg dark:prose-dark w-full">

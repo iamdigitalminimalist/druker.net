@@ -1,8 +1,20 @@
 import { Container } from '@ordev/shared/ui';
 
+const metaContactPage = {
+  title: 'Contact - Or Druker',
+  description: `Discover how to contact Or Druker`,
+  image: '/or-banner.png',
+  type: 'website',
+};
+
 const Contact = () => {
   return (
-    <Container>
+    <Container
+      title={metaContactPage.title}
+      description={metaContactPage.description}
+      image={metaContactPage.image}
+      type={metaContactPage.type}
+    >
       <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <div className="flex flex-col-reverse sm:flex-row items-start">
           <div className="prose prose-sm sm:prose-lg w-full dark:prose-dark">
