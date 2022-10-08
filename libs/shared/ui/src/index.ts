@@ -1,3 +1,4 @@
+export * from './lib/success-message/success-message';
 export * from './lib/social-media-share-button/social-media-share-button';
 export * from './lib/blog-post-card/blog-post-card';
 export * from './lib/container/container';
