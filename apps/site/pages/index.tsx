@@ -35,12 +35,11 @@ export default function Home() {
                 Next.js, and TypeScript.
               </p>
             </div>
-            <div className="w-[100px] sm:w-[176px] relative mb-8 md:mb-0 mr-auto">
+            <div className="relative w-[175px] sm:w-[200px] aspect-square relative mb-8 md:mb-0 mr-auto">
               <Image
                 alt="Or Druker"
-                height={176}
-                width={176}
-                src="/avatar.jpg"
+                layout="fill"
+                src="/profile.jpg"
                 sizes="30vw"
                 priority
                 className="rounded-full"
