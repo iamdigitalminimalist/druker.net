@@ -17,6 +17,7 @@ export function Youtube(props: YoutubeProps) {
         height="500px"
         title={props.title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        className="w-full aspect-video"
       />
     </div>
   );

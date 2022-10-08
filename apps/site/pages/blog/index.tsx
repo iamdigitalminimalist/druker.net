@@ -17,8 +17,9 @@ const Blog = (props: BlogProps) => {
             </h1>
             <p className="my-4">
               I am wiring on everything between coding to zen. If you have any
-              feedback or correction, please contact me or make a pull request
-              to the{' '}
+              feedback or correction, please{' '}
+              <Link href="/contact">contact me</Link> or make a pull request to
+              the{' '}
               <Link href="https://github.com/iamdigitalminimalist/ordev/tree/main/_articles">
                 <a target="_blank">articles folder in therepo</a>
               </Link>

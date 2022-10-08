@@ -18,18 +18,19 @@ export function About(props: AboutProps) {
             </h1>
             <div className="flex flex-col">
               <blockquote className="text-md sm:text-xl">
-                &ldquo;a minimalist is a person who knows what is truly
-                essential for himself&rdquo; &nbsp;&nbsp;— Fumio Sasaki
+                &ldquo;minimalists are people who know what&apos;s truly
+                necessary for them versus what they may want for the sake of
+                appearance&rdquo; &nbsp;&nbsp;— Fumio Sasaki
               </blockquote>
-              <div className="flex flex-row gap-4 items-center justify-evenly">
-                <div className="relative h-28 w-28 sm:h-40 sm:w-40 border border-2 border-black dark:border-white rounded-full">
+              <div className="flex flex-col items-center justify-evenly mt-10 sm:mt-4">
+                <div className="relative w-full aspect-video border border-2 border-black dark:border-white rounded-lg">
                   <Image
-                    src="/avatar.jpg"
+                    src="/happy-herd-16-9-ratio.jpg"
                     layout="fill"
-                    className="rounded-full"
+                    className="rounded-md"
                   />
                 </div>
-                <h2 className="text-lg sm:text-3xl">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl">
                   Hey, <br />
                   my name is{' '}
                   <span className="italic underline underline-offset-4">
@@ -39,7 +40,7 @@ export function About(props: AboutProps) {
                   How can I help you?
                 </h2>
               </div>
-              <div className="mt-8 -mb-4">
+              <div className="mt-4 -mb-4">
                 <p>
                   Thanks for taking the time and interest in hearing more about
                   my journey
@@ -63,31 +64,38 @@ export function About(props: AboutProps) {
               </div>
               <hr />
 
-              <h3>Motivation and Drive</h3>
-              <p className="-my-0.5">I am here to help and get helped 🤓</p>
-              <ul>
-                <li className="-mt-2">
-                  <strong>Showing my work</strong> - I wanted a platform where I
-                  could share knowledge with everyone and show the world what I
-                  have learned and discovered.
-                </li>
-                <li>
-                  <strong>Zen</strong> - Coding has become a meditative
-                  practice, an opportunity to focus on being in the moment and
-                  cultivate habits of simplicity and mindfulness.
-                </li>
-                <li>
-                  <strong>Collaboration</strong> - I am fascinated by the
-                  open-source culture established by the dev community. It is
-                  intriguing how different technologies, such as version control
-                  systems like{' '}
-                  <Link href="https://git-scm.com/">
-                    <a target="_blank">Git</a>
-                  </Link>{' '}
-                  could create paradigm shifts in other aspects of our lives.
-                </li>
-              </ul>
-              <div className="relative h-[300px] w-[300px] sm:h-[400px] sm:w-[400px] border border-2 border-black dark:border-white rounded-2xl my-4 mx-auto">
+              <h3>Motivation and Practice</h3>
+              <div>
+                <p className="-my-0.5">
+                  I feel very fortunate to get support along the way. Creating
+                  this platform is a means to give back and plant the seeds for
+                  the next generation of zen developers 🤓
+                </p>
+                <ul>
+                  <li>
+                    <strong>Showing my work</strong> - I wanted a space where I
+                    could share knowledge with everyone and show the world what
+                    I have learned and discovered.
+                  </li>
+                  <li>
+                    <strong>Zen</strong> - Coding has become a part of my
+                    meditation practice, an opportunity to focus on being in the
+                    present moment and explore new forms of simplicity and
+                    mindfulness.
+                  </li>
+                  <li>
+                    <strong>Collaboration</strong> - I am fascinated by the
+                    open-source culture, established by the dev community. It is
+                    intriguing how different technologies, such as version
+                    control systems like{' '}
+                    <Link href="https://git-scm.com/">
+                      <a target="_blank">Git</a>
+                    </Link>{' '}
+                    could create paradigm shifts in other aspects of our lives.
+                  </li>
+                </ul>
+              </div>
+              <div className="relative w-full aspect-square border border-2 border-black dark:border-white rounded-2xl mx-auto">
                 <Image
                   src="/about.jpg"
                   alt="Or is getting kissed by a happy cow at the Happy Herd, BC, Canada"
@@ -105,9 +113,9 @@ export function About(props: AboutProps) {
               <h3>Getting in touch</h3>
               <div>
                 <p className="-my-0.5">
-                  Would you like to give a feedback? Connect for a
-                  collaboration? A work opportunity? I would be happy to hear
-                  from you. What to do?
+                  Would you like to give feedback? Connect for a collaboration?
+                  Offer a job? I would be happy to hear from you. Here are some
+                  ways to contact me:
                 </p>
                 <ul>
                   <li className="-mt-2">
