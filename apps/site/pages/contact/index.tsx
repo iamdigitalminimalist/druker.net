@@ -20,12 +20,12 @@ const Contact = () => {
           <div className="prose prose-sm sm:prose-lg w-full dark:prose-dark">
             <div className="mx-auto max-w-md sm:max-w-lg lg:mx-0">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                Let's work together
+                Let&apos;s work together
               </h2>
               <p className="mt-4 text-lg sm:mt-3">
-                We’d love to hear from you! Send us a message using the form
-                opposite, or email us. We’d love to hear from you! Send us a
-                message using the form opposite, or email us.
+                I&apos;d love to hear from you! Send a message using the form
+                opposite, or send an email to{' '}
+                <a href="mailto:hello@druker.net">hello@druker.net</a>
               </p>
               <form
                 action="#"
@@ -129,7 +129,7 @@ const Contact = () => {
                       htmlFor="how-can-we-help"
                       className="block text-sm font-medium"
                     >
-                      How can we help you?
+                      How can I help you?
                     </label>
                     <span
                       id="how-can-we-help-description"
@@ -209,7 +209,7 @@ const Contact = () => {
                     htmlFor="how-did-you-hear-about-us"
                     className="block text-sm font-medium"
                   >
-                    How did you hear about us?
+                    How did you hear about the website?
                   </label>
                   <div className="mt-1">
                     <input
