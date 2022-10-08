@@ -29,6 +29,10 @@ export default function Document(props) {
           href="/favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
+        <meta
+          name="google-site-verification"
+          content={process.env.NEXT_PUBLIC_GSC_CONTENT_ID}
+        />
       </Head>
       <body className="bg-gray-50 dark:bg-gray-900 w-full">
         <Main />
