@@ -52,13 +52,11 @@ export function Article({
         </h2>
         <div className="flex flex-col items-start justify-between w-full my-3 md:flex-row md:items-center">
           <div className="flex items-center">
-            <div className="relative h-10 w-10">
+            <div className="relative aspect-square h-12 border border-[2px] border-neutral-400 dark:border-neutral-600 rounded-full">
               <Image
                 alt="Or Druker"
-                height={24}
-                width={24}
-                sizes="20vw"
-                src="/avatar.jpg"
+                layout="fill"
+                src="/profile.jpg"
                 className="rounded-full"
               />
             </div>
