@@ -1,3 +1,4 @@
+export * from './lib/subscribe-newsletter/subscribe-newsletter';
 export * from './lib/lodaing-spinner/lodaing-spinner';
 export * from './lib/error-message/error-message';
 export * from './lib/success-message/success-message';

@@ -1,25 +1,13 @@
-import { type NextRequest } from 'next/server';
+import { NextApiRequest, NextApiResponse } from 'next';
 
-export const config = {
-  runtime: 'experimental-edge',
-};
-
-export default async function handler(req: NextRequest) {
-  const { searchParams } = new URL(req.url);
-  const email = searchParams.get('email');
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const { email } = req.body;
 
   if (!email) {
-    return new Response(
-      JSON.stringify({
-        error: 'Email is required',
-      }),
-      {
-        status: 400,
-        headers: {
-          'content-type': 'application/json',
-        },
-      }
-    );
+    return res.status(400).json({ error: 'Email is required' });
   }
 
   const result = await fetch('https://www.getrevue.co/api/v2/subscribers', {
@@ -28,33 +16,14 @@ export default async function handler(req: NextRequest) {
       Authorization: `Token ${process.env.REVUE_API_KEY}`,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ email }),
+    body: JSON.stringify({ email, double_opt_in: false }),
   });
+
   const data = await result.json();
 
   if (!result.ok) {
-    return new Response(
-      JSON.stringify({
-        error: data.error.email[0],
-      }),
-      {
-        status: 500,
-        headers: {
-          'content-type': 'application/json',
-        },
-      }
-    );
+    return res.status(500).json({ error: data.error.email[0] });
   }
 
-  return new Response(
-    JSON.stringify({
-      error: '',
-    }),
-    {
-      status: 201,
-      headers: {
-        'content-type': 'application/json',
-      },
-    }
-  );
+  return res.status(201).json({ error: '' });
 }
