@@ -11,14 +11,7 @@ const metaHomePage = {
   type: 'website',
 };
 
-import { join } from 'path';
-
-const SUBSCRIBE_API_PATH = join(process.cwd(), '/api/subscribers');
-const SUBSCRIBERS_API_PATH = join(process.cwd(), '/api/subscribe?email=');
-
 export default function Home() {
-  console.log(SUBSCRIBE_API_PATH);
-  console.log(SUBSCRIBERS_API_PATH);
   return (
     <Container
       title={metaHomePage.title}
