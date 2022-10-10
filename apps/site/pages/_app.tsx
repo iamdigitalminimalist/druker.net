@@ -4,7 +4,7 @@ import './styles.css';
 import { useEffect } from 'react';
 import TagManager, { TagManagerArgs } from 'react-gtm-module';
 
-function CustomApp({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
   // Google Tag Manager
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID || '';
   const tagManagerArgs: TagManagerArgs = {
@@ -20,5 +20,3 @@ function CustomApp({ Component, pageProps }: AppProps) {
     </ThemeProvider>
   );
 }
-
-export default CustomApp;

@@ -1,4 +1,4 @@
-import Footer from '../footer/footer';
+import { Footer } from '../footer/footer';
 import Navbar from '../navbar/navbar';
 import Head from 'next/head';
 import { useRouter } from 'next/router';

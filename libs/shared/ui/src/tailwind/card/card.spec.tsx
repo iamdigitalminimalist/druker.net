@@ -1,10 +1,10 @@
 // import { render } from '@testing-library/react';
 //
-// import SuccessMessage from './success-message';
+// import { Card } from './card';
 //
-// describe('SuccessMessage', () => {
+// describe('Card', () => {
 //   it('should render successfully', () => {
-//     const { baseElement } = render(<SuccessMessage />);
+//     const { baseElement } = render(<Card />);
 //     expect(baseElement).toBeTruthy();
 //   });
 // });

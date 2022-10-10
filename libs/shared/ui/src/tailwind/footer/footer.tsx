@@ -1,6 +1,7 @@
 import Link from 'next/link';
+import React from 'react';
 
-export interface FooterProps {}
+// export interface FooterProps {}
 
 const navigation = {
   main: [
@@ -46,7 +47,7 @@ const navigation = {
   ],
 };
 
-export default function Footer() {
+export const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-50 dark:bg-gray-900 w-screen h-full">
       <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
@@ -80,4 +81,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};

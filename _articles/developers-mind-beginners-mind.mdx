@@ -50,8 +50,8 @@ _<u>Tip</u>: if you feel lost or discouraged, get in touch with your beginner's 
 ### What do you need to get started?
 
 - **Patience**. Similarly to studying a foreign language, you can't learn coding all at once and make rapid progress. Learn it little by little.
-- **Endurance**. Endurance. Sometimes in the journey, you may feel lost. Let it come and let it go, but don't serve it a cup of tea.
-- **Teacher**. Find a coding mentor and follow them. See if you can get chat with a teacher and about what you learn and discover. _<u>Hint</u>: in the beginner's mind, everyone could be your teacher._
+- **Endurance**. Sometimes in the journey, you may feel lost and overwhelmed. No need to panic. Let it come and let it go, but don't serve it a cup of tea 🫖
+- **Teacher**. Find coding mentors and follow them. See if you can get chat with a teacher about what you learn and discover. _<u>Hint</u>: in the beginner's mind, everyone could be your teacher._
 
 So the biggest challenge is to keep your beginner's mind. The rest will keep itself, moment after moment.
 There is no need to have a deep understanding of technology or a CS degree.
@@ -59,7 +59,8 @@ Even though you read many docs and articles, you should read each sentence with 
 You would rather not say, "I know what coding is," or "I have mastered DevOps."
 _Be careful about this point._
 
-```ts
+```typescript jsx
+import React, { useState } from 'react';
 import { ThemeProvider } from 'zen-mind';
 import { Component } from 'developer-mind';
 import { theme } from '../styles/beginners-mind';
@@ -69,7 +70,7 @@ import { BeginnersMindAppProps } from '../libs/@types';
 export const BeginnersMindApp = (props: BeginnersMindAppProps) => {
   const [isDiscourage, setIsDiscourage] = useState(false);
 
-  handleOnDiscouarge = async () => {
+  const handleOnDiscouarge = async () => {
     try {
       await Promise.all([
         props.patience.slowDown(),

@@ -1,11 +1,9 @@
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-
 import { Disclosure } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
-import Link from 'next/link';
+import clsx from 'clsx';
 
 interface NavItemProps {
   href: string;
@@ -35,10 +33,6 @@ const navLinks = [
   },
 ];
 
-function classNames(...classes: (false | null | undefined | string)[]) {
-  return classes.filter(Boolean).join(' ');
-}
-
 function NavItem({ href, text }: NavItemProps) {
   const router = useRouter();
   const isActive = router.asPath === href;
@@ -47,7 +41,7 @@ function NavItem({ href, text }: NavItemProps) {
     <NextLink href={href}>
       <Disclosure.Button
         as="a"
-        className={classNames(
+        className={clsx(
           isActive
             ? 'font-semibold text-gray-800 dark:text-gray-800 bg-gray-200'
             : 'font-normal text-gray-300 dark:text-gray-400 dark:hover:text-gray-600',

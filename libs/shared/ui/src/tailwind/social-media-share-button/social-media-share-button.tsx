@@ -1,4 +1,3 @@
-// import styles from './social-media-share-button.module.css';
 import {
   LinkedinShareButton,
   LinkedinIcon,
@@ -7,6 +6,7 @@ import {
   WhatsappShareButton,
   WhatsappIcon,
 } from 'react-share';
+import React from 'react';
 
 /* eslint-disable-next-line */
 export interface SocialMediaShareButtonProps {
@@ -14,7 +14,9 @@ export interface SocialMediaShareButtonProps {
   title: string;
 }
 
-export function SocialMediaShareButton(props: SocialMediaShareButtonProps) {
+export const SocialMediaShareButton: React.FC<SocialMediaShareButtonProps> = (
+  props
+) => {
   return (
     <section className="flex flex-row gap-3">
       <LinkedinShareButton
@@ -49,4 +51,4 @@ export function SocialMediaShareButton(props: SocialMediaShareButtonProps) {
       </WhatsappShareButton>
     </section>
   );
-}
+};
