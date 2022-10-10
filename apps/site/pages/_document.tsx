@@ -4,13 +4,6 @@ export default function Document(props) {
   return (
     <Html lang="en">
       <Head>
-        {/*<link*/}
-        {/*  rel="preload"*/}
-        {/*  href="/fonts/ibm-plex-sans-var.woff2"*/}
-        {/*  as="font"*/}
-        {/*  type="font/woff2"*/}
-        {/*  crossOrigin="anonymous"*/}
-        {/*/>*/}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
