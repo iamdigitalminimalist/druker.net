@@ -1,4 +1,14 @@
 import { Container } from '@ordev/shared/ui';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
+
+type InputDate = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber?: string;
+  message: string;
+};
 
 const metaContactPage = {
   title: 'Contact - Or Druker',
@@ -8,6 +18,34 @@ const metaContactPage = {
 };
 
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<InputDate>();
+
+  const onSubmitForm = async (values: InputDate) => {
+    const config = {
+      method: 'POST',
+      url: `/api/contact`,
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+      },
+      data: values,
+    };
+
+    try {
+      const response = await axios(config);
+      if (response.status == 200) {
+        // console.log('success');
+        reset();
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
   return (
     <Container
       title={metaContactPage.title}
@@ -15,10 +53,10 @@ const Contact = () => {
       image={metaContactPage.image}
       type={metaContactPage.type}
     >
-      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-8">
         <div className="flex flex-col-reverse sm:flex-row items-start">
           <div className="prose prose-sm sm:prose-lg w-full dark:prose-dark">
-            <div className="mx-auto max-w-md sm:max-w-lg lg:mx-0">
+            <div className="mx-auto max-w-md sm:max-w-xl lg:mx-0">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
                 Let&apos;s work together
               </h2>
@@ -28,13 +66,12 @@ const Contact = () => {
                 <a href="mailto:hello@druker.net">hello@druker.net</a>
               </p>
               <form
-                action="#"
-                method="POST"
+                onSubmit={handleSubmit(onSubmitForm)}
                 className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
               >
                 <div>
                   <label
-                    htmlFor="first-name"
+                    htmlFor="firstName"
                     className="block text-sm font-medium"
                   >
                     First name
@@ -42,16 +79,26 @@ const Contact = () => {
                   <div className="mt-1">
                     <input
                       type="text"
-                      name="first-name"
-                      id="first-name"
-                      autoComplete="given-name"
-                      className="caret-blue-700 dark:text-gray-900 block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
+                      {...register('firstName', {
+                        required: {
+                          value: true,
+                          message: 'Please enter your first name',
+                        },
+                      })}
+                      id="firstName"
+                      placeholder="First Name"
+                      className={`caret-blue-700 dark:text-gray-900 block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm ${
+                        errors.firstName ? 'ring-2 ring-red-500' : null
+                      }`}
                     />
+                    <span className="text-red-400 text-sm py-2">
+                      {errors?.firstName?.message}
+                    </span>
                   </div>
                 </div>
                 <div>
                   <label
-                    htmlFor="last-name"
+                    htmlFor="lastName"
                     className="block text-sm font-medium"
                   >
                     Last name
@@ -59,11 +106,21 @@ const Contact = () => {
                   <div className="mt-1">
                     <input
                       type="text"
-                      name="last-name"
-                      id="last-name"
-                      autoComplete="family-name"
-                      className="caret-blue-700 dark:text-gray-900 block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
+                      {...register('lastName', {
+                        required: {
+                          value: true,
+                          message: 'Please enter your last name',
+                        },
+                      })}
+                      id="lastName"
+                      placeholder="Last Name"
+                      className={`caret-blue-700 dark:text-gray-900 block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm ${
+                        errors.lastName ? 'ring-2 ring-red-500' : null
+                      }`}
                     />
+                    <span className="text-red-400 text-sm py-2">
+                      {errors?.lastName?.message}
+                    </span>
                   </div>
                 </div>
                 <div className="sm:col-span-2">
@@ -72,35 +129,40 @@ const Contact = () => {
                   </label>
                   <div className="mt-1">
                     <input
-                      id="email"
-                      name="email"
                       type="email"
+                      {...register('email', {
+                        required: {
+                          value: true,
+                          message: 'Please enter your email address',
+                        },
+                        minLength: {
+                          value: 8,
+                          message: 'Your email is too short',
+                        },
+                        maxLength: {
+                          value: 80,
+                          message: 'Your email is too long',
+                        },
+                        pattern: {
+                          value: /^[A-Z\d._%+-]+@[A-Z\d.-]+\.[A-Z]{2,}$/i,
+                          message: 'Please enter a valid email',
+                        },
+                      })}
+                      id="email"
                       autoComplete="email"
-                      className="caret-blue-700 dark:text-gray-900 block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
+                      className={`caret-blue-700 dark:text-gray-900 block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm ${
+                        errors.email ? 'ring-2 ring-red-500' : null
+                      }`}
                     />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <label
-                    htmlFor="company"
-                    className="block text-sm font-medium"
-                  >
-                    Company
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      type="text"
-                      name="company"
-                      id="company"
-                      autoComplete="organization"
-                      className="caret-blue-700 dark:text-gray-900 block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
-                    />
+                    <span className="text-red-400 text-sm py-2">
+                      {errors?.email?.message}
+                    </span>
                   </div>
                 </div>
                 <div className="sm:col-span-2">
                   <div className="flex justify-between">
                     <label
-                      htmlFor="phone"
+                      htmlFor="phoneNumber"
                       className="block text-sm font-medium"
                     >
                       Phone
@@ -114,9 +176,9 @@ const Contact = () => {
                   </div>
                   <div className="mt-1">
                     <input
-                      type="text"
-                      name="phone"
-                      id="phone"
+                      type="tel"
+                      {...register('phoneNumber')}
+                      id="phoneNumber"
                       autoComplete="tel"
                       aria-describedby="phone-description"
                       className="caret-blue-700 dark:text-gray-900 block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
@@ -126,7 +188,7 @@ const Contact = () => {
                 <div className="sm:col-span-2">
                   <div className="flex justify-between">
                     <label
-                      htmlFor="how-can-we-help"
+                      htmlFor="message"
                       className="block text-sm font-medium"
                     >
                       How can I help you?
@@ -140,84 +202,31 @@ const Contact = () => {
                   </div>
                   <div className="mt-1">
                     <textarea
-                      id="how-can-we-help"
-                      name="how-can-we-help"
+                      {...register('message', {
+                        required: {
+                          value: true,
+                          message: 'Please enter a message',
+                        },
+                        minLength: {
+                          value: 20,
+                          message: 'Your message is too short',
+                        },
+                        maxLength: {
+                          value: 500,
+                          message: 'Your message is too long',
+                        },
+                      })}
+                      id="message"
+                      placeholder="Type your message here"
                       aria-describedby="how-can-we-help-description"
                       rows={4}
-                      className="caret-blue-700 dark:text-gray-900 block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
-                      defaultValue={''}
+                      className={`caret-blue-700 dark:text-gray-900 block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm ${
+                        errors.email ? 'ring-2 ring-red-500' : null
+                      }`}
                     />
-                  </div>
-                </div>
-                <fieldset className="sm:col-span-2">
-                  <legend className="block text-sm font-medium">
-                    Expected budget
-                  </legend>
-                  <div className="mt-4 grid grid-cols-1 gap-y-4">
-                    <div className="flex items-center">
-                      <input
-                        id="budget-under-25k"
-                        name="budget"
-                        defaultValue="under_25k"
-                        type="radio"
-                        className="h-4 w-4 border-gray-300 text-grape-600 focus:ring-grape-500"
-                      />
-                      <label htmlFor="budget-under-25k" className="ml-3">
-                        <span className="block text-sm">Less than $25K</span>
-                      </label>
-                    </div>
-                    <div className="flex items-center">
-                      <input
-                        id="budget-25k-50k"
-                        name="budget"
-                        defaultValue="25k-50k"
-                        type="radio"
-                        className="h-4 w-4 border-gray-300 text-grape-600 focus:ring-grape-500"
-                      />
-                      <label htmlFor="budget-25k-50k" className="ml-3">
-                        <span className="block text-sm">$25K – $50K</span>
-                      </label>
-                    </div>
-                    <div className="flex items-center">
-                      <input
-                        id="budget-50k-100k"
-                        name="budget"
-                        defaultValue="50k-100k"
-                        type="radio"
-                        className="h-4 w-4 border-gray-300 text-grape-600 focus:ring-grape-500"
-                      />
-                      <label htmlFor="budget-50k-100k" className="ml-3">
-                        <span className="block text-sm">$50K – $100K</span>
-                      </label>
-                    </div>
-                    <div className="flex items-center">
-                      <input
-                        id="budget-over-100k"
-                        name="budget"
-                        defaultValue="over_100k"
-                        type="radio"
-                        className="h-4 w-4 border-gray-300 text-grape-600 focus:ring-grape-500"
-                      />
-                      <label htmlFor="budget-over-100k" className="ml-3">
-                        <span className="block text-sm">$100K+</span>
-                      </label>
-                    </div>
-                  </div>
-                </fieldset>
-                <div className="sm:col-span-2">
-                  <label
-                    htmlFor="how-did-you-hear-about-us"
-                    className="block text-sm font-medium"
-                  >
-                    How did you hear about the website?
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      type="text"
-                      name="how-did-you-hear-about-us"
-                      id="how-did-you-hear-about-us"
-                      className="caret-blue-700 dark:text-gray-900 block w-full rounded-md border-gray-300 shadow-sm focus:border-grape-500 focus:ring-grape-500 sm:text-sm"
-                    />
+                    <span className="text-red-400 text-sm py-2">
+                      {errors?.message?.message}
+                    </span>
                   </div>
                 </div>
                 <div className="text-right sm:col-span-2">
