@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { LinkIcon } from '@heroicons/react/outline';
 import { FaGithub } from 'react-icons/fa';
+
 // export interface ProjectsProps {}
 
 const projects = [
@@ -13,10 +14,10 @@ const projects = [
       href: 'https://livlior.com',
       label: 'Website',
     },
-    repoLink: {
-      href: 'https://github.com/iamdigitalminimalist/liv-lior-landingpage',
-      label: 'Repo',
-    },
+    // repoLink: {
+    //   href: 'https://github.com/iamdigitalminimalist/liv-lior-landingpage',
+    //   label: 'Repo',
+    // },
     projectLink: {
       href: '#',
       label: 'read more',
@@ -27,7 +28,7 @@ const projects = [
     name: 'Plastic Free',
     description: 'Introducing an e-commerce website for a sustainable future.',
     liveSiteLink: {
-      href: 'e-commerce-pttk.vercel.app',
+      href: 'https://e-commerce-pttk.vercel.app/',
       label: 'Website',
     },
     repoLink: {
@@ -41,21 +42,35 @@ const projects = [
     logo: '/logos/plastic-free-logo.svg',
   },
   {
-    name: 'Find My Zen Center',
-    description: 'Helping people to find a meditation group around them',
+    name: 'Rating App',
+    description:
+      'A simple UI, built with Svelte, to collect feedback from users',
     liveSiteLink: {
-      href: '#',
+      href: 'https://svelete-rating-app.vercel.app/',
       label: 'Website',
     },
     repoLink: {
-      href: '#',
+      href: 'https://github.com/iamdigitalminimalist/svelete-rating-app',
       label: 'Repo',
     },
     projectLink: {
       href: '#',
       label: 'read more',
     },
-    logo: '/logos/plastic-free-logo.svg',
+    logo: '/logos/rating-app-logo.svg',
+  },
+  {
+    name: 'Find My Zen Center (Coming Soon)',
+    description: 'Helping people to find a meditation group around them',
+    repoLink: {
+      href: 'https://github.com/iamdigitalminimalist/find-my-zen-center-front-end',
+      label: 'Repo',
+    },
+    projectLink: {
+      href: '#',
+      label: 'read more',
+    },
+    logo: '/logos/find-zen-center-logo.svg',
   },
 ];
 
@@ -74,10 +89,10 @@ const Projects = () => {
       image={metaProjectsPage.image}
       type={metaProjectsPage.type}
     >
-      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-8">
         <div className="flex flex-col items-start">
           <div className="mb-16">
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
               Projects
             </h1>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
@@ -93,14 +108,8 @@ const Projects = () => {
           >
             {projects.map((project) => (
               <Card as="li" key={project.name}>
-                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-gray-200 shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:ring-0">
-                  <Image
-                    src={project.logo}
-                    alt=""
-                    layout="fill"
-                    className="h-8 w-8"
-                    unoptimized
-                  />
+                <div className="relative z-10 aspect-square flex h-14 w-14 items-center justify-center rounded-full bg-gray-200 shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:ring-0">
+                  <Image src={project.logo} alt="" layout="fill" unoptimized />
                 </div>
                 <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                   <Card.Link href={project.projectLink.href}>
@@ -109,24 +118,28 @@ const Projects = () => {
                 </h2>
                 <Card.Description>{project.description}</Card.Description>
                 <div className="relative z-10 mt-6 flex flex-row gap-3 text-sm font-medium text-blue-300 transition group-hover:text-blue-500 dark:text-blue-200">
-                  <div className="flex flex-row gap-1">
-                    <LinkIcon className="h-5 w-5 flex-none" />
-                    <Link
-                      href={project.liveSiteLink.href}
-                      className="ml-2 cursor-pointer"
-                    >
-                      <a target="_blank">{project.liveSiteLink.label}</a>
-                    </Link>
-                  </div>
-                  <div className="flex flex-row gap-1">
-                    <FaGithub className="h-5 w-5 flex-none" />
-                    <Link
-                      href={project.repoLink.href}
-                      className="ml-2 cursor-pointer"
-                    >
-                      <a target="_blank">{project.repoLink.label}</a>
-                    </Link>
-                  </div>
+                  {project.liveSiteLink ? (
+                    <div className="flex flex-row gap-1">
+                      <LinkIcon className="h-5 w-5 flex-none" />
+                      <Link
+                        href={project.liveSiteLink.href}
+                        className="ml-2 cursor-pointer"
+                      >
+                        <a target="_blank">{project.liveSiteLink.label}</a>
+                      </Link>
+                    </div>
+                  ) : null}
+                  {project.repoLink ? (
+                    <div className="flex flex-row gap-1">
+                      <FaGithub className="h-5 w-5 flex-none" />
+                      <Link
+                        href={project.repoLink.href}
+                        className="ml-2 cursor-pointer"
+                      >
+                        <a target="_blank">{project.repoLink.label}</a>
+                      </Link>
+                    </div>
+                  ) : null}
                 </div>
               </Card>
             ))}

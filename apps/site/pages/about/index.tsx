@@ -22,19 +22,19 @@ export function About(props: AboutProps) {
       image={metaAboutPage.image}
       type={metaAboutPage.type}
     >
-      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-8">
         <div className="flex flex-col-reverse sm:flex-row items-start">
           <article className="prose prose-sm sm:prose-lg dark:prose-dark w-full">
             <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
               About {props.name}
             </h1>
             <div className="flex flex-col">
-              <blockquote className="text-md sm:text-xl">
+              <blockquote className="text-gray-600 dark:text-gray-400 mr-6 mb-8 max-w-xl font-medium">
                 &ldquo;minimalists are people who know what&apos;s truly
                 necessary for them versus what they may want for the sake of
                 appearance&rdquo; &nbsp;&nbsp;— Fumio Sasaki
               </blockquote>
-              <div className="flex flex-col items-center justify-evenly mt-10 sm:mt-4">
+              <div className="flex flex-col items-center justify-evenly mt-4">
                 <div className="relative w-full aspect-video border border-2 border-black dark:border-white rounded-lg">
                   <Image
                     src="/happy-herd-16-9-ratio.jpg"
@@ -85,9 +85,9 @@ export function About(props: AboutProps) {
                 </p>
                 <ul>
                   <li>
-                    <strong>Showing my work</strong> - I wanted a space where I
-                    could share knowledge with everyone and show the world what
-                    I have learned and discovered.
+                    <strong>Showing my work</strong> - I wanted a website where
+                    I could share knowledge with everyone and show the world
+                    what I have learned and discovered.
                   </li>
                   <li>
                     <strong>Zen</strong> - Coding has become a part of my
@@ -97,7 +97,7 @@ export function About(props: AboutProps) {
                   </li>
                   <li>
                     <strong>Collaboration</strong> - I am fascinated by the
-                    open-source culture, established by the dev community. It is
+                    open-source culture established by the dev community. It is
                     intriguing how different technologies, such as version
                     control systems like{' '}
                     <Link href="https://git-scm.com/">
@@ -139,19 +139,9 @@ export function About(props: AboutProps) {
                   <li>
                     <address>
                       Submit a form on the{' '}
-                      <Link href="/contact">contact page</Link>
-                    </address>
-                  </li>
-                  <li>
-                    <address>
-                      Send a message on the social media @ {'  '}
-                      <Link href="https://twitter.com/OrDruker">
-                        <a target="_blank">Twitter</a>
-                      </Link>{' '}
-                      or{' '}
-                      <Link href="https://www.linkedin.com/in/or-druker/">
-                        <a target="_blank">LinkedIn</a>
-                      </Link>
+                      <Link href="/contact">contact page</Link>{' '}
+                      {` (doesn't work at
+                      the moment)`}
                     </address>
                   </li>
                 </ul>
