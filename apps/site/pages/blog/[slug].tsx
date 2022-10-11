@@ -5,7 +5,11 @@ import { readdirSync } from 'fs';
 import { getParsedFileContentBySlug, renderMarkdown } from '@ordev/markdown';
 import { MDXRemote } from 'next-mdx-remote';
 import dynamic from 'next/dynamic';
-import { Container, SocialMediaShareButton } from '@ordev/shared/ui';
+import {
+  Container,
+  SocialMediaShareButton,
+  SubscribeNewsletter,
+} from '@ordev/shared/ui';
 import Image from 'next/image';
 import { format } from 'date-fns';
 
@@ -42,7 +46,7 @@ export function Article({
       image={metaBlogPost.image}
       type={metaBlogPost.type}
     >
-      <article className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
+      <article className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-8">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
           {frontMatter.title}
         </h1>
@@ -81,6 +85,7 @@ export function Article({
           </div>
           <hr />
         </div>
+        <SubscribeNewsletter />
       </article>
     </Container>
   );

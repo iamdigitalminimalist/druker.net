@@ -28,11 +28,11 @@ const Blog = (props: BlogProps) => {
               Blog
             </h1>
             <p className="text-gray-600 dark:text-gray-400 mr-6 mb-16 max-w-2xl font-medium">
-              I am wiring on coding with a zen mind. If you have any feedback or
-              correction, please <Link href="/contact">contact me</Link> or make
-              a pull request to the{' '}
+              I am wiring on coding with a zen spirit. If you have any feedback
+              or correction, kindly <Link href="/contact">contact me</Link> or
+              make a pull request to the{' '}
               <Link href="https://github.com/iamdigitalminimalist/ordev/tree/main/_articles">
-                <a target="_blank">articles folder in therepo</a>
+                <a target="_blank">articles folder in this repo</a>
               </Link>
               .
             </p>

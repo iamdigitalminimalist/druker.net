@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const metaHomePage = {
-  title: 'Or Druker – Zen Student & Developer',
+  title: 'Or Druker – Front End Developer',
   description: `Helping developers build a faster web with cutting-edge
                 technologies. Teaching front-end development with React,
                 Next.js, and TypeScript.`,
@@ -27,7 +27,7 @@ export default function Home() {
                 Or Druker
               </h1>
               <h2 className="text-gray-700 dark:text-gray-200 mb-4 mt-1 text-xl sm:text-2xl">
-                Zen Student & Developer
+                Front End Developer
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mr-6 mb-16 max-w-lg font-medium">
                 Helping developers build a faster web with cutting-edge
@@ -57,12 +57,12 @@ export default function Home() {
               gradient="from-[#D8B4FE] to-[#818CF8]"
             />
             <BlogPostCard
-              title={'React in a Nutshell - Coming Soon'}
+              title={'React in a Nutshell **Coming Soon**'}
               slug=""
               gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
             />
             <BlogPostCard
-              title={'Thinking in JavaScript - Coming Soon'}
+              title={'Thinking in JavaScript **Coming Soon**'}
               slug=""
               gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
             />
