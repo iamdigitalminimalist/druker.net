@@ -161,7 +161,7 @@ const Contact = () => {
                     </label>
                     <span
                       id="phone-description"
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-300"
                     >
                       Optional
                     </span>
@@ -187,7 +187,7 @@ const Contact = () => {
                     </label>
                     <span
                       id="how-can-we-help-description"
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-300"
                     >
                       Max. 500 characters
                     </span>

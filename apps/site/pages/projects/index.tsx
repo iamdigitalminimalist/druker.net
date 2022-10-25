@@ -77,7 +77,7 @@ const projects = [
     logo: 'assets/logos/rating-app-logo.svg',
   },
   {
-    name: 'Find My Zen Center (Coming Soon)',
+    name: 'Find My Zen Center',
     description: 'Helping people to find a meditation group around them',
     repoLink: {
       href: 'https://github.com/iamdigitalminimalist/find-my-zen-center-front-end',
@@ -116,7 +116,7 @@ const Projects = () => {
               I have worked on many little projects over the years, but these
               are the ones that I want to showcase. Many projects are
               open-source, so if you see something that interests you, check out
-              the code and contribute if you have ideas for how to improve them.
+              the code and fork it.
             </p>
           </div>
           <ul
