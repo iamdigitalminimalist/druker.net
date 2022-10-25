@@ -1,0 +1,38 @@
+---
+title: Developer's Mind, Beginner's Mind
+excerpt: Informal thoughts on studying coding with a zen spirit.
+date: '2022-10-02T02:15:21.510Z'
+author:
+  name: 'Or Druker'
+---
+
+<hr />
+
+### Create a UI with Vanilla JavaScript and DOM
+
+```js
+<body>
+  <div id="root"></div>
+  <script type="text/javascript">
+    const rootElement = document.getElementById('root')
+    const element = document.createElement('div')
+    element.textContent = 'Hello World'
+    element.className = 'container' rootElement.appendChild(element)
+  </script>
+</body>
+```
+
+### Create a UI with React's createElement API
+
+```jsx
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/browse/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/browse/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script type="text/javascript">
+        const rootElement = document.querySelector('#root')
+        const root
+
+    </script>
+</body>
+```

@@ -2,14 +2,6 @@ import { Container } from '@ordev/shared/ui';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
-type InputDate = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phoneNumber?: string;
-  message: string;
-};
-
 const metaContactPage = {
   title: 'Contact - Or Druker',
   description: `Discover how to contact Or Druker`,
