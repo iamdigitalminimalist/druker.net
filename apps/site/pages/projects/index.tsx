@@ -8,6 +8,23 @@ import { FaGithub } from 'react-icons/fa';
 
 const projects = [
   {
+    name: 'Druker Dev',
+    description: 'We make your life simpler. You have more time for art and craft ',
+    liveSiteLink: {
+      href: 'https://drukerdev.com',
+      label: 'Website',
+    },
+    // repoLink: {
+    //   href: 'https://github.com/iamdigitalminimalist/liv-lior-landingpage',
+    //   label: 'Repo',
+    // },
+    projectLink: {
+      href: '#',
+      label: 'read more',
+    },
+    logo: 'assets/logos/druker-dev-logo-fb-desktop.png',
+  },
+  {
     name: 'Liv Lior',
     description: 'Connecting outdoor wellness activities with technology.',
     liveSiteLink: {
@@ -22,7 +39,7 @@ const projects = [
       href: '#',
       label: 'read more',
     },
-    logo: '/logos/livlior-logo.png',
+    logo: 'assets/logos/livlior-logo.png',
   },
   {
     name: 'Plastic Free',
@@ -39,7 +56,7 @@ const projects = [
       href: '#',
       label: 'read more',
     },
-    logo: '/logos/plastic-free-logo.svg',
+    logo: 'assets/logos/plastic-free-logo.svg',
   },
   {
     name: 'Rating App',
@@ -57,7 +74,7 @@ const projects = [
       href: '#',
       label: 'read more',
     },
-    logo: '/logos/rating-app-logo.svg',
+    logo: 'assets/logos/rating-app-logo.svg',
   },
   {
     name: 'Find My Zen Center (Coming Soon)',
@@ -70,7 +87,7 @@ const projects = [
       href: '#',
       label: 'read more',
     },
-    logo: '/logos/find-zen-center-logo.svg',
+    logo: 'assets/logos/find-zen-center-logo.svg',
   },
 ];
 
