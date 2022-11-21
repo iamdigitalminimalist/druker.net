@@ -40,11 +40,13 @@ export function Resume() {
           <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-slate-900 dark:text-slate-100">
             About
           </h1>
-          <div className="relative w-[175px] sm:w-[200px] border-[3px] border-gray-400 dark:border-gray-100 rounded-2xl aspect-square relative my-8 mr-auto">
+          <div className="border-[3px] border-gray-400 dark:border-gray-100 rounded-2xl aspect-square relative my-8 mr-auto">
             <Image
               alt="Or Druker"
-              layout="fill"
               src="/profile.jpg"
+              width={250}
+              height={250}
+              quality={100}
               sizes="30vw"
               priority
               className="rounded-xl"
@@ -122,28 +124,30 @@ export function Resume() {
                 </a>
               </address>{' '}
               or submit a form through the{' '}
-              <Link href="/contact">
-                <a className="font-medium text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:dark:text-blue-600 hover:underline">
-                  contact page
-                </a>
+              <Link
+                href="/contact"
+                className="font-medium text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:dark:text-blue-600 hover:underline"
+              >
+                contact page
               </Link>
             </div>
           </div>
           <div className="mt-8 flex flex-col space-y-2 sm:flex-row sm:space-x-10 sm:space-y-0">
-            <Link href="apps/site/pages/about/index#free-chapters">
-              <a className="font-medium text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:dark:text-blue-600">
-                Download my Formal Resume <span aria-hidden="true">&rarr;</span>
-              </a>
-            </Link>
-            <Link href="https://www.linkedin.com/in/or-druker">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:dark:text-blue-600"
-              >
-                Visit my LinkedIn Profile <span aria-hidden="true">&rarr;</span>
-              </a>
-            </Link>
+            <a
+              href="apps/site/pages/about/index#free-chapters"
+              rel="noopener noreferrer"
+              className="font-medium text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:dark:text-blue-600"
+            >
+              Download my Formal Resume <span aria-hidden="true">&rarr;</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/or-druker"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:dark:text-blue-600"
+            >
+              Visit my LinkedIn Profile <span aria-hidden="true">&rarr;</span>
+            </a>
           </div>
           <div>
             <div className="my-8">

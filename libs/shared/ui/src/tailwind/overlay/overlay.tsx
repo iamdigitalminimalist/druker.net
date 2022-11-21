@@ -57,12 +57,13 @@ export const Overlay = (props: OverlayProps) => {
                     <div>
                       <div className="pb-1 sm:pb-6">
                         <div>
-                          <div className="relative aspect-video w-full bg-slate-300">
+                          <div className="">
                             <Image
-                              className="absolute object-cover"
+                              className="object-cover aspect-video"
                               src={props.job.imageSrc}
                               alt=""
-                              layout="fill"
+                              height={280}
+                              width={500}
                             />
                           </div>
                           <div className="mt-6 px-4 sm:mt-8 sm:flex sm:items-end sm:px-6">
@@ -160,6 +161,7 @@ export const Overlay = (props: OverlayProps) => {
                               <a
                                 href={props.job.websiteUrl}
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:dark:text-blue-600"
                               >
                                 {props.job.websiteUrl.replace(

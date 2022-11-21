@@ -30,9 +30,13 @@ export const Uncopyright = () => {
             <p>
               {`This entire blog and website are uncopyrighted, following the same
               principles of `}
-              <Link href="https://zenhabits.net/uncopyright">
-                <a target="_blank">Leo Babauta&#8217;s uncopyright policy.</a>
-              </Link>
+              <a
+                href="https://zenhabits.net/uncopyright"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Leo Babauta&#8217;s uncopyright policy.
+              </a>
             </p>
             <p>
               That means I&#8217;ve put them in the public domain, and released

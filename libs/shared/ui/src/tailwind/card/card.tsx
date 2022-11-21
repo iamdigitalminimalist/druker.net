@@ -56,7 +56,10 @@ export const Card = ({
 }: CardProps) => {
   return (
     <Component
-      className={clsx(className, 'group relative flex flex-col items-start')}
+      className={clsx(
+        className,
+        'group relative flex flex-col items-start py-3'
+      )}
     >
       {children}
     </Component>
@@ -71,7 +74,7 @@ Card.Link = function CardLink(props: CardLinkProps) {
         href={props.href}
         className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"
       >
-        <a className="relative z-10">{props.children}</a>
+        <div className="relative z-10">{props.children}</div>
       </Link>
     </>
   );

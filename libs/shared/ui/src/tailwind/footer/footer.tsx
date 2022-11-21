@@ -52,25 +52,27 @@ export const Footer: React.FC = () => {
         >
           {navigation.main.map((item) => (
             <div key={item.key} className="px-5 py-2">
-              <Link href={item.href}>
-                <a className="text-base text-gray-600 dark:text-gray-200 hover:text-gray-900">
-                  {item.name}
-                </a>
+              <Link
+                href={item.href}
+                className="text-base text-gray-600 dark:text-gray-200 hover:text-gray-900"
+              >
+                {item.name}
               </Link>
             </div>
           ))}
         </nav>
         <div className="mt-8 flex items-center justify-center space-x-6">
           {navigation.social.map((item) => (
-            <Link key={item.name} href={item.href}>
-              <a
-                target="_blank"
-                className="text-gray-600 dark:text-gray-200 hover:text-gray-900"
-              >
-                <span className="sr-only">{item.name}</span>
-                <item.icon className="h-5 w-5" aria-hidden="true" />
-              </a>
-            </Link>
+            <a
+              key={item.name}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 dark:text-gray-200 hover:text-gray-900"
+            >
+              <span className="sr-only">{item.name}</span>
+              <item.icon className="h-5 w-5" aria-hidden="true" />
+            </a>
           ))}
         </div>
       </div>

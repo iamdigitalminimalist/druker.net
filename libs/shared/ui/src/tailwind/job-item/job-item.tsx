@@ -52,14 +52,13 @@ export const JobItem = (props: JobItemProps) => {
       onClick={() => handleSelectItem(props.item.id)}
       className="group relative flex flex-col overflow-hidden rounded-lg border-2 border-gray-800 dark:border-gray-200 bg-gray-100 dark:bg-gray-900  cursor-pointer"
     >
-      <div className="relative h-full w-full aspect-square group-hover:opacity-75">
-        <Image
-          src={props.item.imageSrc}
-          alt={props.item.imageAlt}
-          layout="fill"
-          className="object-cover object-center"
-        />
-      </div>
+      <Image
+        width={500}
+        height={500}
+        src={props.item.imageSrc}
+        alt={props.item.imageAlt}
+        className="object-cover object-center aspect-square group-hover:opacity-75"
+      />
       <div className="flex flex-1 flex-col space-y-2 p-4">
         <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100">
           <span aria-hidden="true" className="absolute inset-0" />

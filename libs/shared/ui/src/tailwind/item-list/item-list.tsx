@@ -1,5 +1,3 @@
-import { Overlay } from '../overlay/overlay';
-import Image from 'next/image';
 import { JobItem } from '../job-item/job-item';
 
 /* eslint-disable-next-line */
