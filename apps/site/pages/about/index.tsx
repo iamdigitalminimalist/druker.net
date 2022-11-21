@@ -52,7 +52,7 @@ export function About() {
               className="rounded-xl"
             />
           </div>
-          <div className="max-full py-3">
+          <div className="w-full py-3">
             <div>
               <h2 className="text-md md:text-lg font-bold tracking-tight text-slate-900 dark:text-slate-100">
                 <span className="block mb-2">Dear reader,</span>
@@ -87,7 +87,7 @@ export function About() {
                           {faq.answer.map((p) => (
                             <p
                               key={p.id}
-                              className="text-base mt-3 max-w-xl ml-5"
+                              className="ml-5 text-base mt-3 max-w-xl"
                             >
                               {p.text}
                             </p>

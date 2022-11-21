@@ -13,10 +13,11 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: true,
   },
-  // experimental: {
-  //   outputFileTracingRoot: path.join(__dirname, '../../'),
-  //   outputStandalone: true,
-  // },
+  experimental: {
+    fontLoaders: [
+      { loader: '@next/font/google', options: { subsets: ['latin'] } },
+    ],
+  },
 };
 
 module.exports = withNx(nextConfig);
