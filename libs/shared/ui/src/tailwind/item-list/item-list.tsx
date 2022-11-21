@@ -1,6 +1,5 @@
 import { JobItem } from '../job-item/job-item';
 
-/* eslint-disable-next-line */
 export interface ItemListProps {
   title: string;
   workExperience: any;

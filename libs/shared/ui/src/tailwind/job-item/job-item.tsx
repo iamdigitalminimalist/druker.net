@@ -34,7 +34,6 @@ type EducationItemType = {
   highlights: string[];
 };
 
-/* eslint-disable-next-line */
 export interface JobItemProps {
   item: JobItemType | EducationItemType;
   selectedItem: null | number;

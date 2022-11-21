@@ -15,11 +15,11 @@ export const faqs = [
     answer: [
       {
         id: 1,
-        text: 'My career path is somewhat unordinary. I started my career as a Traffic Analyst and Course Instructor at the Israeli Military Intelligence Unit 8200 in a high-tech-like environment.',
+        text: 'My career path is somewhat unusual. I started my career as a Traffic Analyst and Course Instructor at the Israeli Military Intelligence Unit 8200 in a high-tech-like environment.',
       },
       {
         id: 2,
-        text: 'After 4 years in various tech roles, I decided to proceed with BA studies in psychology and literature at the Hebrew University of Jerusalem. Although I received an offer to continue to MA studies and become a psychotherapist or literature scholar, I chose to move to Vancouver, Canada, where I got accepted to study Graphic Communication at the British Columbia Institute of Technology (BCIT).',
+        text: 'After 4 years in various tech roles, I decided to proceed with BA studies in psychology and literature at the Hebrew University of Jerusalem. Although I received an offer to continue to MA studies and become a psychotherapist or literature scholar, I chose to move to Vancouver, Canada, where I was accepted to study Graphic Communication at the British Columbia Institute of Technology (BCIT).',
       },
       {
         id: 3,
@@ -33,7 +33,7 @@ export const faqs = [
     answer: [
       {
         id: 1,
-        text: 'Although I do not have extensive experience in R&D, with the help of friends and colleagues from the tech industry, I have been persistently working on mastering the field. I am a team player, and I love supporting inspiring visions. As a team player, one of my favorite aspects of working in any industry is taking a product and maximizing its potential in wholesome ways.',
+        text: 'Although I do not yet have extensive experience in R&D, with the help of friends and colleagues from the tech industry, I have been persistently working on mastering the field. As a team player, who loves supporting inspiring visions, one of my favorite aspects of working in any industry is taking a product and maximizing its potential in wholesome ways.',
       },
       {
         id: 2,

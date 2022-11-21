@@ -3,7 +3,6 @@ import { Dialog, Transition } from '@headlessui/react';
 import { MdOutlineClose } from 'react-icons/md';
 import Image from 'next/image';
 
-/* eslint-disable-next-line */
 export interface OverlayProps {
   open: boolean;
   onClose: () => void;

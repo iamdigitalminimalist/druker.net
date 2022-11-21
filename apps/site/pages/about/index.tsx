@@ -9,7 +9,7 @@ import { FiChevronDown } from 'react-icons/fi';
 import { FaCaretRight } from 'react-icons/fa';
 import { faqs, workExperience } from '../../data/resumeData';
 
-const metaResumePage = {
+const metaAboutPage = {
   title: 'About - Resume - Or Druker',
   description: `An informal resume that introduces myself much better`,
   image: '/or-banner.png',
@@ -24,16 +24,16 @@ export function CheckIcon(props) {
   );
 }
 
-export function Resume() {
+export function About() {
   const [open, setOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
   return (
     <Container
-      title={metaResumePage.title}
-      description={metaResumePage.description}
-      image={metaResumePage.image}
-      type={metaResumePage.type}
+      title={metaAboutPage.title}
+      description={metaAboutPage.description}
+      image={metaAboutPage.image}
+      type={metaAboutPage.type}
     >
       <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-8">
         <div className="flex flex-col items-start">
@@ -54,8 +54,8 @@ export function Resume() {
           </div>
           <div className="max-full py-3">
             <div>
-              <h2 className="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
-                <span className="block mb-2">Hello folks,</span>
+              <h2 className="text-md md:text-lg font-bold tracking-tight text-slate-900 dark:text-slate-100">
+                <span className="block mb-2">Dear reader,</span>
                 My name is Or Druker. I am an Israeli-Canadian software
                 engineer.
               </h2>
@@ -167,4 +167,4 @@ export function Resume() {
   );
 }
 
-export default Resume;
+export default About;
