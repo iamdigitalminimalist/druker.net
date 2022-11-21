@@ -114,15 +114,13 @@ export function Resume() {
               I would be glad to meet you and share my passion in more depth.
             </p>
             <div className="mt-4">
-              <address className="inline-block not-italic">
-                Please send me an email to{' '}
-                <a
-                  href="mailto:or@druker.net"
-                  className="font-medium text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:dark:text-blue-600 hover:underline"
-                >
-                  or@druker.net
-                </a>
-              </address>{' '}
+              Please send me an email to{' '}
+              <a
+                href="mailto:or@druker.net"
+                className="font-medium text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:dark:text-blue-600 hover:underline"
+              >
+                or@druker.net
+              </a>{' '}
               or submit a form through the{' '}
               <Link
                 href="/contact"
@@ -134,7 +132,7 @@ export function Resume() {
           </div>
           <div className="mt-8 flex flex-col space-y-2 sm:flex-row sm:space-x-10 sm:space-y-0">
             <a
-              href="apps/site/pages/about/index#free-chapters"
+              href="/resume/or-druker-resume.pdf"
               rel="noopener noreferrer"
               className="font-medium text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:dark:text-blue-600"
             >
