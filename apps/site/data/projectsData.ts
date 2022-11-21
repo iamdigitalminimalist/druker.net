@@ -16,7 +16,7 @@ export const projects = [
       href: '#',
       label: 'read more',
     },
-    logo: '/assets/logos/druker-dev-logo-fb-desktop.png',
+    logo: '/assets/logos/druker-dev-logo.svg',
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ export const projects = [
       href: '#',
       label: 'read more',
     },
-    logo: '/assets/logos/livlior-logo.png',
+    logo: '/assets/logos/liv-lior-logo.svg',
   },
   {
     id: 3,

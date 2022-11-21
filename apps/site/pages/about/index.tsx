@@ -117,6 +117,8 @@ export function Resume() {
               Please send me an email to{' '}
               <a
                 href="mailto:or@druker.net"
+                target="_blank"
+                rel="noreferrer noopener"
                 className="font-medium text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:dark:text-blue-600 hover:underline"
               >
                 or@druker.net
