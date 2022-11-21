@@ -46,7 +46,7 @@ export const JobItem = (props: JobItemProps) => {
   };
 
   return (
-    <div
+    <button
       key={props.item.id}
       onClick={() => handleSelectItem(props.item.id)}
       className="group relative flex flex-col overflow-hidden rounded-lg border-2 border-gray-800 dark:border-gray-200 bg-gray-100 dark:bg-gray-900  cursor-pointer"
@@ -77,6 +77,6 @@ export const JobItem = (props: JobItemProps) => {
         onClose={() => props.setSelectedItem(null)}
         job={props.item}
       />
-    </div>
+    </button>
   );
 };

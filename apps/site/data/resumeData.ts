@@ -5,30 +5,12 @@ export const faqs = [
     answer: [
       {
         id: 1,
-        text: 'I am seeking an entry-level position in a high-tech company, ideally in R&D as a Frontend / Backend / Full Stack Developer. Understanding the risk of hiring juniors positions for software engineering roles, I am willing to jump on supporting roles, such as QA Automation and Technical Support.',
+        text: 'I am seeking an entry-level position in a high-tech company, ideally in R&D as a Frontend / Backend / Full Stack Developer.',
       },
     ],
   },
   {
     id: 2,
-    question: 'What led me to this point?',
-    answer: [
-      {
-        id: 1,
-        text: 'My career path is somewhat unusual. I started my career as a Traffic Analyst and Course Instructor at the Israeli Military Intelligence Unit 8200 in a high-tech-like environment.',
-      },
-      {
-        id: 2,
-        text: 'After 4 years in various tech roles, I decided to proceed with BA studies in psychology and literature at the Hebrew University of Jerusalem. Although I received an offer to continue to MA studies and become a psychotherapist or literature scholar, I chose to move to Vancouver, Canada, where I was accepted to study Graphic Communication at the British Columbia Institute of Technology (BCIT).',
-      },
-      {
-        id: 3,
-        text: 'During my studies at BCIT, I was offered an internship at Hemlock Printers, a North American market leader in the printing industry. Upon graduation, Hemlock decided to hire me as a Customer Success Representative. My job description soon became much broader as I took on more duties to support other teams in the company through my technological innovation. After a couple of years, I got an offer to be the first Product Manager in the company, a position tailored to my unique skill set.',
-      },
-    ],
-  },
-  {
-    id: 3,
     question: 'Why would you wish to hire me?',
     answer: [
       {
@@ -55,6 +37,28 @@ export const faqs = [
       },
     ],
   },
+  {
+    id: 3,
+    question: 'What led me to this point?',
+    answer: [
+      {
+        id: 1,
+        text: 'My career path is somewhat unusual. I started my career as a Traffic Analyst and Course Instructor at the Israeli Military Intelligence Unit 8200 in a high-tech-like environment.',
+      },
+      {
+        id: 2,
+        text: 'After 4 years in various tech roles, I decided to proceed with BA studies in psychology and literature at the Hebrew University of Jerusalem. Although I received an offer to continue to MA studies and become a psychotherapist or literature scholar, I chose to move to Vancouver, Canada, where I was accepted to study Graphic Communication at the British Columbia Institute of Technology (BCIT).',
+      },
+      {
+        id: 3,
+        text: 'During my studies at BCIT, I was offered an internship at Hemlock Printers, a North American market leader in the printing industry. Upon graduation, Hemlock decided to hire me as a Customer Success Representative.',
+      },
+      {
+        id: 4,
+        text: 'My job description soon became much broader as I took on more duties to support other teams in the company through my technological innovation and unique skill set. For example, I introduced e2e testing to reduce the need for repetitive manual testing, developed an automated script to parse a purchase order in PDF to JSON, and led the methodology shift to Agile with Jira.',
+      },
+    ],
+  },
 ];
 
 export const workExperience = [
@@ -68,7 +72,7 @@ export const workExperience = [
     websiteUrl: 'https://www.drukerdev.com',
     imageSrc: '/resume/experience/druker-dev.png',
     imageAlt:
-      'Black machined steel pen with hexagonal grip and small white logo at top.',
+      'The hero section of Druker Dev homepage, offering to take control of your digital presence. Visit www.drukerdev.com',
     summary:
       'After 1.5 years of an intensive coding journey, I decided to get my hands dirty and open a technical service business. Druker Dev provides a wide range of services, from configuring IT systems and workflow automation to SEO and website development.',
     highlights: [
@@ -144,7 +148,7 @@ export const workExperience = [
     websiteUrl: 'https://www.druker.net',
     imageSrc: '/resume/experience/druker-net.png',
     imageAlt:
-      'Black machined steel pen with hexagonal grip and small white logo at top.',
+      'A screenshot of the code editor Visual Studio Code with a React/Next.js clean code of a marketing landing page',
     summary:
       'After a few years of experimenting with UI/UX design and web development with WordPress, I wanted to become a Full Stack Developer. Since then, I have been taking courses, reading docs, meeting code mentors, helping newbies in the dev community, and working on personal projects.',
     highlights: [
@@ -247,8 +251,7 @@ export const workExperience = [
     location: 'Burnaby, BC, Canada',
     websiteUrl: 'https://www.hemlock.com',
     imageSrc: '/resume/experience/hemlock-customer-success.jpg',
-    imageAlt:
-      'Black machined steel pen with hexagonal grip and small white logo at top.',
+    imageAlt: 'Two hands point on a laptop screen',
     summary:
       'Upon graduation, I received an offer letter to join Hemlock in the business side of Hemlock, where I managed the online projects of the company’s enterprise clients. Shortly after I started, I extended my duties to find new IT-based solutions to automate the development of e-commerce websites, dashboards, and workflows.',
     highlights: [
@@ -315,8 +318,7 @@ export const workExperience = [
     location: 'Burnaby, BC, Canada',
     websiteUrl: 'https://www.hemlock.com',
     imageSrc: '/resume/experience/hemlock-prepress.jpg',
-    imageAlt:
-      'Black machined steel pen with hexagonal grip and small white logo at top.',
+    imageAlt: 'Magnifier or Printer Loupe Sits On A Colorful CMYK Test Sheet',
     summary:
       'Hemlock is a market leader in the North-American commercial printing industry. During a career fair, I received an offer to join as an intern from the company’s VP. This role required paying careful attention to details at a fast pace.',
     tools: [
@@ -364,51 +366,39 @@ export const educationExperience = [
   {
     id: 1,
     name: 'British Columbia Institute of Technology',
-    title: 'PrePress Operator',
+    title: 'Graphic Communications Technology Management',
     scope: 'Diploma',
     dates: 'Sep 2017 - Jun 2019',
     location: 'Burnaby, BC, Canada',
     websiteUrl: 'https://www.bcit.ca',
     imageSrc: '/resume/experience/hemlock-prepress.png',
-    imageAlt:
-      'Black machined steel pen with hexagonal grip and small white logo at top.',
-    summary:
-      'Hemlock is a market leader in the North-American commercial printing industry. I joined the company after one year of Graphic Communication studies and two weeks of internship. In this position, I was responsible for the proofing (color & imposition) and plate making.',
+    imageAlt: '',
+    summary: '',
     tools: [
       {
         id: 1,
-        name: 'Adobe InDesign',
+        name: '',
       },
       {
         id: 2,
-        name: 'Adobe Illustrator',
-      },
-      {
-        id: 3,
-        name: 'Adobe PhotoShop',
-      },
-      {
-        id: 4,
-        name: 'Kodak Prinergy',
+        name: '',
       },
     ],
     highlights: [
       {
         id: 1,
         name: 'Successful',
-        about:
-          'Managed to reduce the expected production time of my role by 50% and took on extra duties to assist the team',
+        about: '',
       },
       {
         id: 2,
         name: 'Leadership',
-        about: 'After one month in my job, I managed to',
+        about: '',
       },
       {
         id: 3,
         name: 'Challenges',
-        about:
-          'The biggest difficulty was time management because I was at school 40 hours per week and 20+ hours at work.',
+        about: '',
       },
     ],
   },
@@ -421,44 +411,33 @@ export const educationExperience = [
     location: 'Jerusalem, Israel',
     websiteUrl: 'https://en.huji.ac.il/',
     imageSrc: '/resume/experience/hemlock-prepress.png',
-    imageAlt:
-      'Black machined steel pen with hexagonal grip and small white logo at top.',
-    summary:
-      'Hemlock is a market leader in the North-American commercial printing industry. I joined the company after one year of Graphic Communication studies and two weeks of internship. In this position, I was responsible for the proofing (color & imposition) and plate making.',
+    imageAlt: '',
+    summary: '',
     tools: [
       {
         id: 1,
-        name: 'Adobe InDesign',
+        name: '',
       },
       {
         id: 2,
-        name: 'Adobe Illustrator',
-      },
-      {
-        id: 3,
-        name: 'Adobe PhotoShop',
-      },
-      {
-        id: 4,
-        name: 'Kodak Prinergy',
+        name: '',
       },
     ],
     highlights: [
       {
         id: 1,
         name: 'Successful',
-        about: 'After one month in my job, I managed to',
+        about: '',
       },
       {
         id: 2,
         name: 'Leadership',
-        about: 'After one month in my job, I managed to',
+        about: '',
       },
       {
         id: 3,
         name: 'Challenges',
-        about:
-          'The biggest difficulty was time management because I was at school 40 hours per week and 20+ hours at work.',
+        about: '',
       },
     ],
   },

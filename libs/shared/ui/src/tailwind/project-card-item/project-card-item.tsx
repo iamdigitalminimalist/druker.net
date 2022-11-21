@@ -31,7 +31,7 @@ export const ProjectCardItem = (props: ProjectCardItemProps) => {
   return (
     <div
       key={props.project.id}
-      className="col-span-1 flex flex-col divide-y divide-gray-300 dark:divide-gray-200 rounded-lg dark:bg-gray-400 text-center shadow"
+      className="col-span-1 flex flex-col divide-y divide-gray-300 dark:divide-gray-200 rounded-lg dark:bg-gray-800 text-center shadow"
     >
       <div className="flex flex-1 flex-col p-8">
         <Image
@@ -39,7 +39,7 @@ export const ProjectCardItem = (props: ProjectCardItemProps) => {
           width={50}
           className="mx-auto h-32 w-32 flex-shrink-0 rounded-full bg-gray-200"
           src={props.project.logo}
-          alt=""
+          alt={`${props.project.name} logo`}
         />
         <h3 className="mt-6 text-sm font-medium dark:text-gray-100">
           {props.project.name}
