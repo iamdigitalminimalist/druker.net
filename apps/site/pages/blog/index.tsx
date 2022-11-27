@@ -27,15 +27,19 @@ const Blog = (props: BlogProps) => {
             <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
               Blog
             </h1>
-            <p className="text-gray-600 dark:text-gray-400 mr-6 mb-16 max-w-2xl font-medium">
+            <div className="text-gray-600 dark:text-gray-400 mr-6 mb-16 max-w-2xl font-medium">
               I am wiring on coding with a zen spirit. If you have any feedback
               or correction, kindly <Link href="/contact">contact me</Link> or
               make a pull request to the{' '}
-              <Link href="https://github.com/iamdigitalminimalist/ordev/tree/main/_articles">
-                <a target="_blank">articles folder in this repo</a>
-              </Link>
+              <a
+                href="https://github.com/iamdigitalminimalist/ordev/tree/main/_articles"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                articles folder in this repo
+              </a>
               .
-            </p>
+            </div>
             <div className="flex gap-6 flex-col w-full md:flex-row mt-10">
               <BlogPostCard
                 title={"Developer's Mind, Beginner's Mind"}

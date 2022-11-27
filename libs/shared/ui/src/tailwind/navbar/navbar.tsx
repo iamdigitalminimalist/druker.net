@@ -38,18 +38,16 @@ function NavItem({ href, text }: NavItemProps) {
   const isActive = router.asPath === href;
 
   return (
-    <NextLink href={href}>
-      <Disclosure.Button
-        as="a"
-        className={clsx(
-          isActive
-            ? 'font-semibold text-gray-800 dark:text-gray-800 bg-gray-200'
-            : 'font-normal text-gray-300 dark:text-gray-400 dark:hover:text-gray-600',
-          'cursor-pointer inline-block p-1 px-3 py-2 mx-[1px] sm:mx-2 rounded-lg hover:bg-gray-200 dark:transition-all'
-        )}
-      >
-        {text}
-      </Disclosure.Button>
+    <NextLink
+      href={href}
+      className={clsx(
+        isActive
+          ? 'font-semibold text-gray-800 dark:text-gray-800 bg-gray-200'
+          : 'font-normal text-gray-300 dark:text-gray-400 dark:hover:text-gray-600',
+        'cursor-pointer inline-block p-1 px-3 py-2 mx-[1px] sm:mx-2 rounded-lg hover:bg-gray-200 dark:transition-all'
+      )}
+    >
+      <span>{text}</span>
     </NextLink>
   );
 }
@@ -61,10 +59,7 @@ export default function Navbar() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <Disclosure
-      as="nav"
-      className="flex items-center justify-center sm:items-start sm:justify-between gap-3 sm:gap-4 w-full relative max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16 text-gray-900 bg-gray-50 dark:bg-gray-900 bg-opacity-60 dark:text-gray-100"
-    >
+    <nav className="flex items-center justify-center sm:items-start sm:justify-between gap-3 sm:gap-4 w-full relative max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pt-8 pb-8 sm:pb-16 text-gray-900 bg-gray-50 dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
       <div className="sm:flex-1">
         <a href="#skip" className="skip-nav">
           Skip to content
@@ -107,6 +102,6 @@ export default function Navbar() {
           </svg>
         )}
       </button>
-    </Disclosure>
+    </nav>
   );
 }

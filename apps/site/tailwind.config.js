@@ -46,9 +46,11 @@ module.exports = {
             'h2,h3,h4': {
               'scroll-margin-top': spacing[32],
             },
+            strong: theme('colors.gray.700'),
             thead: {
               borderBottomColor: theme('colors.gray.200'),
             },
+            hr: { borderColor: theme('colors.gray.500') },
             code: { color: theme('colors.pink.500') },
             'blockquote p:first-of-type::before': false,
             'blockquote p:last-of-type::after': false,
@@ -72,6 +74,8 @@ module.exports = {
               color: theme('colors.gray.100'),
               'scroll-margin-top': spacing[32],
             },
+            figcaption: { color: theme('colors.gray.200') },
+            strong: theme('colors.gray.200'),
             hr: { borderColor: theme('colors.gray.700') },
             ol: {
               li: {
@@ -83,7 +87,6 @@ module.exports = {
                 '&:before': { backgroundColor: theme('colors.gray.500') },
               },
             },
-            strong: { color: theme('colors.gray.100') },
             thead: {
               th: {
                 color: theme('colors.gray.100'),

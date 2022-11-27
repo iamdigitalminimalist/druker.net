@@ -1,11 +1,10 @@
-import { GetStaticProps } from 'next';
+import Link from 'next/link';
 import { Container } from '@ordev/shared/ui';
 import Image from 'next/image';
-import Link from 'next/link';
-
-export interface AboutProps {
-  name: string;
-}
+import { RiPlantLine, RiEmpathizeFill } from 'react-icons/ri';
+import { GiMeditation } from 'react-icons/gi';
+import { MdOutlinePodcasts } from 'react-icons/md';
+import clsx from 'clsx';
 
 const metaAboutPage = {
   title: 'About - Or Druker',
@@ -14,7 +13,46 @@ const metaAboutPage = {
   type: 'website',
 };
 
-export function About(props: AboutProps) {
+const funFacts = [
+  {
+    id: 1,
+    title: 'I lead Plant-based lifestyle',
+    description:
+      'I eat only plant-based whole foods and consume cruelty-free products. It is not religion, just a preference and a way to support animals.',
+    icon: RiPlantLine,
+    iconForeground: 'text-teal-700',
+    iconBackground: 'bg-teal-50',
+  },
+  {
+    id: 2,
+    title: 'I invented an empathy practice at age 7',
+    description:
+      'In my practice, I imagine the world from the perspective of characters in books I read and movies I watched.',
+    icon: RiEmpathizeFill,
+    iconForeground: 'text-purple-700',
+    iconBackground: 'bg-purple-50',
+  },
+  {
+    id: 3,
+    title: 'I practice zen meditation and minfulness',
+    description:
+      'In the last 5 years, I have been practicing meditation almost every day. I practice both by myself and with a group.',
+    icon: GiMeditation,
+    iconForeground: 'text-sky-700',
+    iconBackground: 'bg-sky-50',
+  },
+  {
+    id: 4,
+    title: 'I listen to podcasts at 2x speed',
+    description:
+      'I trained myself to listen at 2x speed so I could save time. I am working now to consume content at 3x speed.',
+    icon: MdOutlinePodcasts,
+    iconForeground: 'text-yellow-700',
+    iconBackground: 'bg-yellow-50',
+  },
+];
+
+export function About() {
   return (
     <Container
       title={metaAboutPage.title}
@@ -26,105 +64,186 @@ export function About(props: AboutProps) {
         <div className="flex flex-col-reverse sm:flex-row items-start">
           <article className="prose prose-sm sm:prose-lg dark:prose-dark w-full">
             <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
-              About {props.name}
+              About
             </h1>
-            <div className="flex flex-col">
-              <blockquote className="text-gray-600 dark:text-gray-400 mr-6 mb-8 max-w-xl font-medium">
-                &ldquo;minimalists are people who know what&apos;s truly
-                necessary for them versus what they may want for the sake of
-                appearance&rdquo; &nbsp;&nbsp;— Fumio Sasaki
-              </blockquote>
-              <div className="flex flex-col items-center justify-evenly mt-4">
-                <div className="relative w-full aspect-video border border-2 border-black dark:border-white rounded-lg">
+            <div className="flex flex-col -mt-4 sm:-mt-16">
+              <h2 className="leading-tight text-2xl md:text-3xl text-black dark:text-white">
+                Hi, my name is{' '}
+                <span className="italic underline underline-offset-4">
+                  Or Druker.
+                </span>{' '}
+                I am a technology researcher, developer, and writer.
+              </h2>
+              <p className="leading-tight text-2xl md:text-3xl text-gray-700 dark:text-slate-300 mt-3">
+                I make the world a better place by applying my skills and
+                knowledge to support sustainable-innovative visions.
+              </p>
+              <div className="flex flex-col items-center justify-evenly -mt-4 sm:-mt-8">
+                <div className="relative w-full aspect-video rounded-lg">
                   <Image
                     src="/happy-herd-16-9-ratio.jpg"
-                    layout="fill"
+                    alt=""
+                    width={650}
+                    height={435}
                     className="rounded-md"
                   />
                 </div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl">
-                  Hey, <br />
-                  my name is{' '}
-                  <span className="italic underline underline-offset-4">
-                    Or
-                  </span>
-                  <br />
-                  How can I help you?
-                </h2>
               </div>
-              <div className="mt-4 -mb-4">
-                <p>
-                  Thanks for taking the time and interest in hearing more about
-                  my journey
-                </p>
-                <ol>
-                  <li>
-                    If you are interested in my technical background, please
-                    consider reading some of my{' '}
-                    <Link href="/blog">blog posts</Link>.
-                  </li>
-                  <li>
-                    If you are interested to see some of my demo projects,
-                    please consider visiting the{' '}
-                    <Link href="/projects">project page</Link>.
-                  </li>
-                </ol>
-                <p>
-                  Otherwise, please proceed with reading the informal
-                  introduction below.
-                </p>
-              </div>
-              <hr />
 
-              <h3>Motivation and Practice</h3>
               <div>
+                <h3>How I got where we are now?</h3>
                 <p className="-my-0.5">
-                  I feel very fortunate to get support along the way. Creating
-                  this platform is a means to give back and plant the seeds for
-                  the next generation of zen developers 🤓
+                  I was born in 1989 in Israel. Since childhood, I was always{' '}
+                  <em>
+                    <b>curious about life</b>
+                  </em>
+                  . I have always had an{' '}
+                  <em>
+                    <b>interest in art, culture, and technology</b>
+                  </em>
+                  . I loved walking around libraries and surfing the internet to
+                  taste the vast knowledge of the world 🤓
                 </p>
-                <ul>
-                  <li>
-                    <strong>Showing my work</strong> - I wanted a website where
-                    I could share knowledge with everyone and show the world
-                    what I have learned and discovered.
-                  </li>
-                  <li>
-                    <strong>Zen</strong> - Coding has become a part of my
-                    meditation practice, an opportunity to focus on being in the
-                    present moment and explore new forms of simplicity and
-                    mindfulness.
-                  </li>
-                  <li>
-                    <strong>Collaboration</strong> - I am fascinated by the
-                    open-source culture established by the dev community. It is
-                    intriguing how different technologies, such as version
-                    control systems like{' '}
-                    <Link href="https://git-scm.com/">
-                      <a target="_blank">Git</a>
-                    </Link>{' '}
-                    could create paradigm shifts in other aspects of our lives.
-                  </li>
-                </ul>
+                <p>
+                  My teachers used to say I have the{' '}
+                  <em>
+                    <b>rare combination of a high IQ and EQ</b>
+                  </em>
+                  . In High School, I was a top student in the class and an
+                  active member of The Scouts Movement. I majored in{' '}
+                  <u>Computer Science</u>, <u>Math</u>, <u>Data Science</u>, and{' '}
+                  <u>Biology</u>.
+                </p>
+                <p>
+                  After graduating High School, I got drafted into the{' '}
+                  <em>
+                    <b>highly competitive intelligence IDF Unit 8200</b>
+                  </em>{' '}
+                  due to my <u>creativity</u>, <u>analytical thinking</u>, and{' '}
+                  <u>leadership skills</u>. Throughout my military service, I
+                  was a <em>Traffic Analyst and a Course Instructor</em>.
+                </p>
+                <p>
+                  In the last decade, I have studied and worked with{' '}
+                  <em>
+                    <b>various subjects and technologies</b>
+                  </em>
+                  , starting with <u>Psychology</u> and <u>Literature</u> at the
+                  university, then <u>Graphic Communication</u> at a
+                  technological institute, and now,{' '}
+                  <u>Full Stack Development</u>.
+                </p>
+                <p>
+                  My career path is somewhat unusual, but the{' '}
+                  <em>
+                    <b>broad perspective I have accumulated over the years</b>
+                  </em>{' '}
+                  gives me a competitive advantage. I am both a{' '}
+                  <u>People and Tech person</u>, which is - in my opinion - a
+                  key to sustainable success in the modern world.
+                </p>
               </div>
-              <div className="relative w-full aspect-square border border-2 border-black dark:border-white rounded-2xl mx-auto">
+              <div>
+                <h3>What values do I live by?</h3>
+                <h4 className="sm:-my-0.5">Kindness ❣️</h4>
+                <p>
+                  I feel very fortunate to cross paths with many kind people who
+                  taught me the importance of kindness as a way of life.
+                  Throughout my journey, I have learned that it feels better to
+                  give than to take, and people remember how you made them feel.
+                  So, please be mindful and kind to your surroundings.
+                </p>
+                <h4 className="sm:-my-0.5">Simplicity 🧘🏽</h4>
+                <p>
+                  Life is full of distractions, and I could get overwhelmed when
+                  things are complicated and confusing. I found the practice of
+                  simplicity like a key to overcoming these moments. Every time
+                  I get to this confused state of mind, I take a deep breath and
+                  ask myself: &ldquo;what is essential?&rdquo;
+                </p>
+                <h4 className="sm:-my-0.5">Collaboration 👬</h4>
+                <p>
+                  I am fascinated by the open-source culture established by the
+                  dev community. It is intriguing how different technologies,
+                  such as version control systems like{' '}
+                  <a
+                    href="https://git-scm.com/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Git
+                  </a>{' '}
+                  could create paradigm shifts in other aspects of our lives. We
+                  can accomplish much more together than separately.
+                </p>
+              </div>
+              <div className="relative w-full aspect-square rounded-2xl mx-auto -mb-6 sm:-mb-10">
                 <Image
                   src="/about.jpg"
                   alt="Or is getting kissed by a happy cow at the Happy Herd, BC, Canada"
-                  layout="fill"
+                  width={672}
+                  height={672}
                   className="rounded-xl"
                   title="Or and a happy cow in an intimate moment"
                 />
               </div>
-              <figcaption className="text-[0.75rem] sm:text-sm mx-auto mb-2 sm:mb-4">
+              <figcaption className="sm:text-sm text-left">
                 Getting sniffed by a happy cow at{' '}
-                <Link href="https://happyherd.org/">
-                  <a target="_blank">The Happy Herd Farm Sanctuary</a>
-                </Link>
+                <a
+                  href="https://happyherd.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Happy Herd Farm Sanctuary
+                </a>
+                .
               </figcaption>
-              <h3>Getting in touch</h3>
+
               <div>
-                <p className="-my-0.5">
+                <h3>Fun Facts</h3>
+                <div className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-200 dark: bg-gray-400 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
+                  {funFacts.map((fact, actionIdx) => (
+                    <div
+                      key={fact.id}
+                      className={clsx(
+                        actionIdx === 0
+                          ? 'rounded-tl-lg rounded-tr-lg sm:rounded-tr-none'
+                          : '',
+                        actionIdx === 1 ? 'sm:rounded-tr-lg' : '',
+                        actionIdx === funFacts.length - 2
+                          ? 'sm:rounded-bl-lg'
+                          : '',
+                        actionIdx === funFacts.length - 1
+                          ? 'rounded-bl-lg rounded-br-lg sm:rounded-bl-none'
+                          : '',
+                        'relative group bg-gray-200 dark:bg-gray-700 p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500'
+                      )}
+                    >
+                      <div>
+                        <span
+                          className={clsx(
+                            fact.iconBackground,
+                            fact.iconForeground,
+                            'rounded-lg inline-flex p-3 ring-4 ring-gray-400'
+                          )}
+                        >
+                          <fact.icon className="h-6 w-6" aria-hidden="true" />
+                        </span>
+                      </div>
+                      <div className="mt-8">
+                        <h3 className="text-lg font-medium">
+                          <p className="focus:outline-none">{fact.title}</p>
+                        </h3>
+                        <p className="mt-2 text-md">{fact.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3>Getting in touch</h3>
+                <p>
                   Would you like to give feedback? Connect for a collaboration?
                   Offer a job? I would be happy to hear from you. Here are some
                   ways to contact me:
@@ -139,9 +258,19 @@ export function About(props: AboutProps) {
                   <li>
                     <address>
                       Submit a form on the{' '}
-                      <Link href="/contact">contact page</Link>{' '}
-                      {` (doesn't work at
-                      the moment)`}
+                      <Link href="/contact">contact page</Link>
+                    </address>
+                  </li>
+                  <li>
+                    <address>
+                      Contact me through{' '}
+                      <a
+                        href="https://www.linkedin.com/in/or-druker"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        LinkedIn profile
+                      </a>
                     </address>
                   </li>
                 </ul>
@@ -153,13 +282,5 @@ export function About(props: AboutProps) {
     </Container>
   );
 }
-
-export const getStaticProps: GetStaticProps<AboutProps> = async (context) => {
-  return {
-    props: {
-      name: 'Or',
-    },
-  };
-};
 
 export default About;

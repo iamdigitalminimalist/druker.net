@@ -35,11 +35,13 @@ export default function Home() {
                 Next.js, and TypeScript.
               </p>
             </div>
-            <div className="relative w-[175px] sm:w-[200px] aspect-square relative mb-8 md:mb-0 mr-auto">
+            <div className="w-[175px] sm:w-[200px] relative mb-8 sm:mb-0 mr-auto">
               <Image
                 alt="Or Druker"
-                layout="fill"
                 src="/profile.jpg"
+                height={176}
+                width={176}
+                quality={100}
                 sizes="30vw"
                 priority
                 className="rounded-full"
@@ -67,9 +69,12 @@ export default function Home() {
               gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
             />
           </div>
-          <Link href="/blog">
-            <a className="flex items-center mt-4 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6">
-              Read all posts
+          <Link
+            href="/blog"
+            className="flex items-center mt-4 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
+          >
+            <>
+              {`Read all posts`}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -84,7 +89,7 @@ export default function Home() {
                   d="M17.5 12h-15m11.667-4l3.333 4-3.333-4zm3.333 4l-3.333 4 3.333-4z"
                 />
               </svg>
-            </a>
+            </>
           </Link>
           <section id="newsletter" className="my-16">
             <SubscribeNewsletter />

@@ -37,7 +37,7 @@ export const Container = (props: ContainerProps) => {
         <meta name="twitter:description" content={props.description} />
         <meta name="twitter:image" content={props.image} />
       </Head>
-      <div className="flex flex-col justify-center px-4">
+      <div className="flex flex-col justify-center">
         <Navbar />
         <main id="skip" className="flex flex-col justify-center px-8">
           {children}

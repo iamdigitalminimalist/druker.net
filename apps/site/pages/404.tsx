@@ -24,10 +24,11 @@ const NotFoundPage = () => {
           It is either you have found something that used to exist, or you
           spelled something wrong. Can you double check the URL?
         </p>
-        <Link href="/">
-          <a className="p-1 sm:p-4 w-64 font-bold mx-auto bg-gray-300 dark:bg-gray-800 text-center hover:bg-gray-400 hover:opacity-70 rounded-md text-gray-900 dark:text-gray-200">
-            Return Home
-          </a>
+        <Link
+          href="/"
+          className="p-1 sm:p-4 w-64 font-bold mx-auto bg-gray-300 dark:bg-gray-800 text-center hover:bg-gray-400 hover:opacity-70 rounded-md text-gray-900 dark:text-gray-200"
+        >
+          Return Home
         </Link>
       </section>
     </Container>
