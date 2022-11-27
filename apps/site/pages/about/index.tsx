@@ -201,7 +201,7 @@ export function About() {
 
               <div>
                 <h3>Fun Facts</h3>
-                <div className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-200 dark: bg-gray-400 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
+                <div className="divide-y divide-gray-300 overflow-hidden rounded-lg shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
                   {funFacts.map((fact, actionIdx) => (
                     <div
                       key={fact.id}

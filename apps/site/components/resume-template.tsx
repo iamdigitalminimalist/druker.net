@@ -7,6 +7,7 @@ import { useState } from 'react';
 export interface ResumeTemplateProps {
   jobTitle: string;
   category: string;
+  resumeLink: string;
 }
 
 export const ResumeTemplate = (props: ResumeTemplateProps) => {
@@ -33,7 +34,7 @@ export const ResumeTemplate = (props: ResumeTemplateProps) => {
         </div>
         <div className="w-full py-3">
           <div>
-            <h2 className="text-md md:text-lg font-bold tracking-tight text-slate-900 dark:text-slate-100">
+            <h2 className="text-md md:text-lg font-bold text-slate-900 dark:text-slate-100">
               <span className="block mb-2">Dear reader,</span>
               My name is Or Druker. I am an Israeli-Canadian {props.jobTitle}.
             </h2>
@@ -71,7 +72,7 @@ export const ResumeTemplate = (props: ResumeTemplateProps) => {
         </div>
         <div className="mt-8 flex flex-col space-y-2 sm:flex-row sm:space-x-10 sm:space-y-0">
           <a
-            href="/resume/or-druker-resume.pdf"
+            href={props.resumeLink}
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:dark:text-blue-600"
