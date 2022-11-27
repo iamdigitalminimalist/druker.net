@@ -6,6 +6,17 @@ export const faqs = [
       {
         id: 1,
         text: 'I am seeking an entry-level position in a high-tech company, ideally in R&D as a Frontend / Backend / Full Stack Developer.',
+        category: 'developer',
+      },
+      {
+        id: 2,
+        text: 'I am seeking an entry-level position in a high-tech company as a QA Automation Engineer.',
+        category: 'qa',
+      },
+      {
+        id: 3,
+        text: 'I am seeking an entry-level position in a high-tech company as a Technical Support Engineer.',
+        category: 'support',
       },
     ],
   },
@@ -16,24 +27,29 @@ export const faqs = [
       {
         id: 1,
         text: 'Although I do not yet have extensive experience in R&D, with the help of friends and colleagues from the tech industry, I have been persistently working on mastering the field. As a team player, who loves supporting inspiring visions, one of my favorite aspects of working in any industry is taking a product and maximizing its potential in wholesome ways.',
+        category: 'general',
       },
       {
         id: 2,
         text: 'I guarantee that with my wide range of expertise, interpersonal skills, curiosity and talent, I would become an asset to your company.',
+        category: 'general',
       },
     ],
     bullets: [
       {
         id: 1,
         text: 'I have analytical, critical, and systemic thinking, which allow me to solve problems creatively while taking into account the benefits of the business. I keep my mind open to experiences and adventures to manifest innovative ideas.',
+        category: 'general',
       },
       {
         id: 2,
         text: 'I enjoy working in teams and positively communicating with customers. I treat everyone with empathy and dignity.',
+        category: 'general',
       },
       {
         id: 3,
         text: 'I have self-learning skills. Within two years, I taught myself various modern frontend and backend technologies. I am eager to deepen my knowledge and keep up-to-date with new technology.',
+        category: 'general',
       },
     ],
   },
@@ -44,18 +60,22 @@ export const faqs = [
       {
         id: 1,
         text: 'My career path is somewhat unusual. I started my career as a Traffic Analyst and Course Instructor at the Israeli Military Intelligence Unit 8200 in a high-tech-like environment.',
+        category: 'general',
       },
       {
         id: 2,
         text: 'After 4 years in various tech roles, I decided to proceed with BA studies in psychology and literature at the Hebrew University of Jerusalem. Although I received an offer to continue to MA studies and become a psychotherapist or literature scholar, I chose to move to Vancouver, Canada, where I was accepted to study Graphic Communication at the British Columbia Institute of Technology (BCIT).',
+        category: 'general',
       },
       {
         id: 3,
         text: 'During my studies at BCIT, I was offered an internship at Hemlock Printers, a North American market leader in the printing industry. Upon graduation, Hemlock decided to hire me as a Customer Success Representative.',
+        category: 'general',
       },
       {
         id: 4,
         text: 'My job description soon became much broader as I took on more duties to support other teams in the company through my technological innovation and unique skill set. For example, I introduced e2e testing to reduce the need for repetitive manual testing, developed an automated script to parse a purchase order in PDF to JSON, and led the methodology shift to Agile with Jira.',
+        category: 'general',
       },
     ],
   },

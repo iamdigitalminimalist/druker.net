@@ -74,6 +74,7 @@ module.exports = {
               color: theme('colors.gray.100'),
               'scroll-margin-top': spacing[32],
             },
+            figcaption: { color: theme('colors.gray.200') },
             strong: theme('colors.gray.200'),
             hr: { borderColor: theme('colors.gray.700') },
             ol: {

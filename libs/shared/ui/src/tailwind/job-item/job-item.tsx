@@ -59,15 +59,15 @@ export const JobItem = (props: JobItemProps) => {
         className="object-cover object-center aspect-square group-hover:opacity-75"
       />
       <div className="flex flex-1 flex-col space-y-2 p-4">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100">
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100 text-left">
           <span aria-hidden="true" className="absolute inset-0" />
           {props.item.title}
         </h3>
-        <p className="text-sm text-gray-800 dark:text-gray-200">
+        <p className="text-sm text-gray-800 dark:text-gray-200 text-left">
           {props.item.name}
         </p>
         <div className="flex flex-1 flex-col justify-end">
-          <p className="text-base font-medium text-gray-900 dark:text-gray-100">
+          <p className="text-base font-medium text-gray-900 dark:text-gray-100 text-left">
             {props.item.dates}
           </p>
         </div>

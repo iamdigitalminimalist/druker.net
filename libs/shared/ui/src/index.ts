@@ -1,3 +1,4 @@
+export * from './tailwind/questions-and-answers/questions-and-answers';
 export * from './tailwind/project-card-item/project-card-item';
 export * from './tailwind/overlay/overlay';
 export * from './tailwind/button/button';
