@@ -27,7 +27,7 @@ const funFacts = [
     id: 2,
     title: 'I invented an empathy practice at age 7',
     description:
-      'In my practice, I imagine the world from the perspective of characters in books I read and movies I watched.',
+      'In my practice, I used to imagine the world through the perspective of characters in the books I read. I remember appreciating well-rounded characters that presented raw emotions with high intellectual skills.',
     icon: RiEmpathizeFill,
     iconForeground: 'text-purple-700',
     iconBackground: 'bg-purple-50',
@@ -75,8 +75,9 @@ export function About() {
                 I am a technology researcher, developer, and writer.
               </h2>
               <p className="leading-tight text-2xl md:text-3xl text-gray-700 dark:text-slate-300 mt-3">
-                I make the world a better place by applying my skills and
-                knowledge to support sustainable-innovative visions.
+                By applying my skills and knowledge, I aspire to support
+                sustainable-innovative visions and take my part in making the
+                world a better place.
               </p>
               <div className="flex flex-col items-center justify-evenly -mt-4 sm:-mt-8">
                 <div className="relative w-full aspect-video rounded-lg">
@@ -91,26 +92,23 @@ export function About() {
               </div>
 
               <div>
-                <h3>How I got where we are now?</h3>
+                <h3>A glimpse of my past</h3>
                 <p className="-my-0.5">
-                  I was born in 1989 in Israel. Since childhood, I was always{' '}
-                  <em>
-                    <b>curious about life</b>
-                  </em>
-                  . I have always had an{' '}
+                  I was born in 1989 in Israel. Since childhood, I always had an{' '}
                   <em>
                     <b>interest in art, culture, and technology</b>
                   </em>
-                  . I loved walking around libraries and surfing the internet to
-                  taste the vast knowledge of the world 🤓
+                  . I would sit for hours in the public library, surfing the
+                  internet, trying to get a taste the vast knowledge of the
+                  world 🤓
                 </p>
                 <p>
-                  My teachers used to say I have the{' '}
+                  A dear teacher used to say I have the{' '}
                   <em>
                     <b>rare combination of a high IQ and EQ</b>
                   </em>
-                  . In High School, I was a top student in the class and an
-                  active member of The Scouts Movement. I majored in{' '}
+                  . In High School, I was an active member of The Scouts
+                  Movement and a top student in my class. I majored in{' '}
                   <u>Computer Science</u>, <u>Math</u>, <u>Data Science</u>, and{' '}
                   <u>Biology</u>.
                 </p>
@@ -121,20 +119,21 @@ export function About() {
                   </em>{' '}
                   due to my <u>creativity</u>, <u>analytical thinking</u>, and{' '}
                   <u>leadership skills</u>. Throughout my military service, I
-                  was a <em>Traffic Analyst and a Course Instructor</em>.
+                  was a <em>Traffic Analyst and Course Instructor</em>.
                 </p>
                 <p>
                   In the last decade, I have studied and worked with{' '}
                   <em>
                     <b>various subjects and technologies</b>
                   </em>
-                  , starting with <u>Psychology</u> and <u>Literature</u> at the
-                  university, then <u>Graphic Communication</u> at a
-                  technological institute, and now,{' '}
-                  <u>Full Stack Development</u>.
+                  , starting with a BA in <u>Psychology</u> and{' '}
+                  <u>Literature</u> at The Hebrew University of Jerusalem, then
+                  a Diploma in <u>Graphic Communication</u> at the British
+                  Columbia Institute of Technology (BCIT), and now,{' '}
+                  <u>Full Stack Development</u> as self-taught.
                 </p>
                 <p>
-                  My career path is somewhat unusual, but the{' '}
+                  While my career path is somewhat unusual, the{' '}
                   <em>
                     <b>broad perspective I have accumulated over the years</b>
                   </em>{' '}
@@ -147,19 +146,21 @@ export function About() {
                 <h3>What values do I live by?</h3>
                 <h4 className="sm:-my-0.5">Kindness ❣️</h4>
                 <p>
-                  I feel very fortunate to cross paths with many kind people who
-                  taught me the importance of kindness as a way of life.
-                  Throughout my journey, I have learned that it feels better to
-                  give than to take, and people remember how you made them feel.
-                  So, please be mindful and kind to your surroundings.
+                  I feel very fortunate for the many kind people I crossed paths
+                  with who taught me the importance of kindness as a way of
+                  living. Throughout my journey, I have learned that it feels
+                  better to give than to take, and that if you are mindful and
+                  kind to your surroundings, people remember your generosity and
+                  pass that attitude onward.
                 </p>
                 <h4 className="sm:-my-0.5">Simplicity 🧘🏽</h4>
                 <p>
-                  Life is full of distractions, and I could get overwhelmed when
-                  things are complicated and confusing. I found the practice of
-                  simplicity like a key to overcoming these moments. Every time
-                  I get to this confused state of mind, I take a deep breath and
-                  ask myself: &ldquo;what is essential?&rdquo;
+                  Life is full of distractions, and one could get overwhelmed
+                  when things are complicated and confusing. I found the
+                  practice of simplicity to be a key to overcoming these
+                  moments. Every time I get to this confused state of mind, I
+                  take a deep breath and ask myself: &ldquo;what is
+                  essential?&rdquo; and then prioritize.
                 </p>
                 <h4 className="sm:-my-0.5">Collaboration 👬</h4>
                 <p>
