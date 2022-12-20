@@ -1,10 +1,5 @@
-import { GetStaticProps } from 'next';
 import { BlogPostCard, Container } from '@ordev/shared/ui';
 import Link from 'next/link';
-
-export interface BlogProps {
-  name: string;
-}
 
 const metaBlogPage = {
   title: 'Blog - Or Druker',
@@ -13,7 +8,7 @@ const metaBlogPage = {
   type: 'website',
 };
 
-const Blog = (props: BlogProps) => {
+const Blog = () => {
   return (
     <Container
       title={metaBlogPage.title}
@@ -43,17 +38,17 @@ const Blog = (props: BlogProps) => {
             <div className="flex gap-6 flex-col w-full md:flex-row mt-10">
               <BlogPostCard
                 title={"Developer's Mind, Beginner's Mind"}
-                slug="developers-mind-beginners-mind"
+                href=""
                 gradient="from-[#D8B4FE] to-[#818CF8]"
               />
               <BlogPostCard
                 title={'React in a Nutshell - Coming Soon'}
-                slug=""
+                href=""
                 gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
               />
               <BlogPostCard
                 title={'Thinking in JavaScript - Coming Soon'}
-                slug=""
+                href=""
                 gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
               />
             </div>
@@ -62,14 +57,6 @@ const Blog = (props: BlogProps) => {
       </div>
     </Container>
   );
-};
-
-export const getStaticProps: GetStaticProps<BlogProps> = async (context) => {
-  return {
-    props: {
-      name: 'Or',
-    },
-  };
 };
 
 export default Blog;

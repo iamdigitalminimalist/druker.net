@@ -5,7 +5,7 @@ export const faqs = [
     answer: [
       {
         id: 1,
-        text: 'I am seeking an entry-level position in a high-tech company, ideally in R&D as a Frontend / Backend / Full Stack Developer.',
+        text: 'I am seeking an entry-level position in a high-tech company, ideally in R&D as a Front End Developer.',
         category: 'developer',
       },
       {

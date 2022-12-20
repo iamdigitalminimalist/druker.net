@@ -50,31 +50,33 @@ export default function Home() {
           </div>
 
           <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
-            Featured Posts
+            Featured Projects
           </h3>
           <div className="flex gap-6 flex-col w-full md:flex-row">
             <BlogPostCard
-              title={"Developer's Mind, Beginner's Mind"}
-              slug="developers-mind-beginners-mind"
+              title={'Druker Dev: Web Development Agency'}
+              href="https://www.drukerdev.com"
               gradient="from-[#D8B4FE] to-[#818CF8]"
             />
             <BlogPostCard
-              title={'React in a Nutshell **Coming Soon**'}
-              slug=""
+              title={
+                'Liv Lior: Plant-based Adventure | Landing Page for an Event'
+              }
+              href="https://www.livlior.com"
               gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
             />
             <BlogPostCard
-              title={'Thinking in JavaScript **Coming Soon**'}
-              slug=""
+              title={'Rating App | Project in Svelte'}
+              href="https://svelete-rating-app.vercel.app/"
               gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
             />
           </div>
           <Link
-            href="/blog"
+            href="/projects"
             className="flex items-center mt-4 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
           >
             <>
-              {`Read all posts`}
+              {`See all projects`}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

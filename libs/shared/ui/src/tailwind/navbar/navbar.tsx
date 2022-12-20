@@ -1,6 +1,5 @@
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import { Disclosure } from '@headlessui/react';
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import clsx from 'clsx';
@@ -18,16 +17,11 @@ const navLinks = [
   },
   {
     id: '2',
-    href: '/blog',
-    text: 'Blog',
-  },
-  {
-    id: '3',
     href: '/projects',
     text: 'Projects',
   },
   {
-    id: '4',
+    id: '3',
     href: '/about',
     text: 'About',
   },
