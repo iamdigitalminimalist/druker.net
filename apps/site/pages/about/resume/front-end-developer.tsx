@@ -2,7 +2,7 @@ import { Container } from '@ordev/shared/ui';
 import { ResumeTemplate } from '../../../components/resume-template';
 
 const metaResumePage = {
-  title: 'Resume - Or Druker - Full Stack Developer',
+  title: 'Resume - Or Druker - Font End Developer',
   description: `Hello! My name is Or Druker, and I'm a Front End Developer with up-to-date knowledge of modern web and app technologies.`,
   image: '/or-banner.png',
   type: 'website',
