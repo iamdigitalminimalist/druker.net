@@ -50,7 +50,7 @@ export default function Home() {
           </div>
 
           <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
-            Featured Porjects
+            Featured Projects
           </h3>
           <div className="flex gap-6 flex-col w-full md:flex-row">
             <BlogPostCard
