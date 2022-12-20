@@ -1,8 +1,6 @@
-import Link from 'next/link';
-
 export interface BlogPostCardProps {
   title: string;
-  slug: string;
+  href: string;
   gradient: string;
 }
 
@@ -10,10 +8,12 @@ export function classNames(...classes: (false | null | undefined | string)[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export const BlogPostCard = ({ title, slug, gradient }: BlogPostCardProps) => {
+export const BlogPostCard = ({ title, href, gradient }: BlogPostCardProps) => {
   return (
-    <Link
-      href={`/blog/${slug}`}
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className={classNames(
         'transform hover:scale-[1.01] transition-all',
         'rounded-xl w-full md:w-1/3 bg-gradient-to-r p-1',
@@ -28,6 +28,6 @@ export const BlogPostCard = ({ title, slug, gradient }: BlogPostCardProps) => {
           </h4>
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
